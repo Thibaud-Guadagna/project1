@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root{
+    --pink: #d30fc3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+header{
+    background-image: url(./images/background.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 19em;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    margin: 1em;
+    width: 7em;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    
+}
+nav ul li{
+    width: 4em;
+}
+nav ul li img{
+    height: 1.5em;
+    width: 1.5em;
+}
+header h1{
+    color: white;
+    font-family: "Montserrat";
+    font-style: italic;
+    font-size: medium;
+    font-weight: 500;
+    line-height: 1.5em;
+    text-align: center;
+    margin-top: 10em;
+}
+
+main .logoWild{
+    display: flex;
+    margin: 0 auto;
+    width: 18em;
+}
+main h2{
+    color: var(--pink);
+    text-align: center;
+    margin: 1.4em 0;
+    font-family: "Montserrat";
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+#premierTrait {
+    height: 2px;
+    width: 15em;
+    margin: 1em auto;
+    background-color: #4b4b4b;
+}
+
+.group-img img{
+    width: 19em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
