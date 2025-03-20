@@ -48,7 +48,7 @@ h2 {
 .days {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+  gap: 50px;
 
 }
 
@@ -58,6 +58,8 @@ h2 {
     align-items: center;
     flex-direction: column;
     padding: 15px;
+    box-shadow:  1px 1px 10px #d1d0d073;
+    
 
 }
 
@@ -113,20 +115,40 @@ form {
 }
 
 .formulaire {
+    width: 100%;
     border-radius: 10px;
-    border-color: #e2e2e2;
+    border : solid ;
+    background-color: var(--secondary);
+    border-color: #e9e9e9 ;
     padding: 10px;
+    border-bottom-width: 1px;
+    border-top-width: 1px ;
+    border-left-width: 1px;
+    border-right-width: 1px;
 }
 
 .button {
-    margin-left: 60%;
+    margin-left: 70%;
     border-radius: 10px;
-    border-color: #e2e2e2;
+    border-color: var(--secondary) ;
     padding: 10px;
-    background-color: var(--primary);
-    color: var(--tertiary);
     font-weight: bold;
 }
+
+button:hover {
+    transform: translateY(-1px);
+    background-color: var(--primary);
+    color: white;
+}
+
+button:active {
+    background-color: #F7146B;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: white;
+    transform: translateY(0);
+}
+
 .copyright {background-color: var(--primary);
 color: var(--tertiary);
 padding: 10px 0 10px 0}
