@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Home.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <title>Document</title>
   </head>
   <body>
@@ -44,13 +47,44 @@
       <div id="premierTrait"></div>
       <h2>Ou manger ?</h2>
 
-      <section class="group-img">
-        <img src="./images/La cafeteria.jpg" alt="sur place" />
-        <img
-          src="./images/nathalia-segato-as26awWvRvM-unsplash.jpg"
-          alt="a l'exterieur"
-        />
-        <img src="./images/Nos foodtruck.jpg" alt="nos foodtrucks" />
+      <section class="group-imgs">
+        <article class="sur-place">
+          <h3>SUR PLACE</h3>
+        </article>
+
+        <article class="exterieur">
+          <h3>A L'EXTERIEUR</h3>
+        </article>
+
+        <article class="foodtruck">
+          <h3>NOS FOODTRUCKS</h3>
+        </article>
+        <div id="deuxiemeTrait"></div>
+      </section>
+
+      <section class="avis">
+        <h2 class="title-avis">Avis</h2>
+        <div class="content">
+          <img src="./images/Portrait homme.jpg" alt="homme" />
+          <div class="texte">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              totam iste eveniet natus consequatur dolorem!
+            </p>
+            <p class="nom">- Antoine Dupont</p>
+          </div>
+        </div>
+
+        <div class="content">
+          <img src="./images/Portrait femme.jpg" alt="femme" />
+          <div class="texte">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              totam iste eveniet natus consequatur dolorem!
+            </p>
+            <p class="nom">- Charlotte Dupont</p>
+          </div>
+        </div>
       </section>
     </main>
 

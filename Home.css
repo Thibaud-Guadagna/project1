@@ -2,6 +2,8 @@
 
 :root{
     --pink: #d30fc3;
+    --box-shadow: 3px 3px 10px #000000d5;
+    --box-shadow-avis: 3px 3px 9px #0000003b;
 }
 
 *{
@@ -47,8 +49,12 @@ header h1{
     line-height: 1.5em;
     text-align: center;
     margin-top: 10em;
-}
 
+}
+main{
+    background-color: #fafafa;
+    margin-top: -1em;
+}
 main .logoWild{
     display: flex;
     margin: 0 auto;
@@ -69,9 +75,96 @@ main h2{
     background-color: #4b4b4b;
 }
 
-.group-img img{
-    width: 19em;
+.group-imgs{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.sur-place{
+    margin: .8em 0;
+    width: 19em;
+    height: 13em;
+    background-image: url(./images/La\ cafeteria.jpg);
+    background-size: cover;
+    cursor: pointer;
+    border-radius: .5em;
+    box-shadow: var(--box-shadow);
+    filter: brightness(70%);
+}
+.exterieur{
+    margin: .8em 0;
+    width: 19em;
+    height: 13em;
+    background-image: url(./images/paul-rysz-bLF3vK_X2Vc-unsplash.jpg);
+    background-size: cover;
+    cursor: pointer;
+    border-radius: .5em;
+    box-shadow: var(--box-shadow);
+    filter: brightness(70%);
+}
+.foodtruck{
+    margin: .8em 0;
+    width: 19em;
+    height: 13em;
+    background-image: url(./images/Nos\ foodtruck.jpg);
+    background-size: cover;
+    cursor: pointer;
+    border-radius: .5em;
+    box-shadow: var(--box-shadow);
+    filter: brightness(70%);
+}
+article h3{
+    text-align: center;
+    font-family: "Montserrat";
+    font-weight: 500;
+    letter-spacing: .2rem;
+    font-size: 1rem;
+    margin-top: 1.7em;
+    color: white; 
+}
+
+#deuxiemeTrait {
+    height: 2px;
+    width: 15em;
+    margin: 2em auto;
+    background-color: #4b4b4b;
+}
+
+.title-avis{
+    margin: 0 0 1em 0
+}
+
+.avis img{
+    height: 75px;
+    border-radius: 50%;
+    margin-left: 2em;
+}
+.texte{
+    box-shadow: var(--box-shadow-avis);
+    margin-left: 5em;
+    width: 15em;
+    padding: 30px 25px;
+    border-radius: 7px;
+    margin-top: -2.5em;
+
+}
+.texte p{
+    font-family: "Montserrat";
+    font-size: .5rem;
+    font-weight: 400;
+    background-color: white;
+}
+.texte .nom{
+    font-family: "Montserrat";
+    font-size: .6rem;
+    font-weight: 700;
+    text-align: end;
+    width: 100px;
+    margin-left: 105px;
+    margin-bottom: -10px;
+}
+
+.content{
+    margin-bottom: 2em;
 }
