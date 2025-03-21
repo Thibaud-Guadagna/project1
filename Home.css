@@ -17,7 +17,7 @@ header{
     background-image: url(./images/background.jpg);
     background-size: contain;
     background-repeat: no-repeat;
-    height: 19em;
+    height: 21em;
 }
 nav{
     display: flex;
@@ -48,8 +48,8 @@ header h1{
     font-weight: 500;
     line-height: 1.5em;
     text-align: center;
-    margin-top: 10em;
-
+    margin: 11em auto 0 auto;
+    width: 350px;
 }
 main{
     background-color: #fafafa;
