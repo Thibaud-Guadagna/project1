@@ -10,7 +10,8 @@ h2 {
 }
 
 p,
-button {
+button,
+footer {
     font-family: 'Source Sans 3';
 }
 
@@ -20,6 +21,16 @@ button {
     flex-wrap: wrap;
     padding: 5% 2%;
     gap: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+    .filtres {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        gap: 2rem;
+        margin: 2% 0 0 0;
+    }
 }
 
 button {
@@ -78,11 +89,28 @@ button:active {
     gap: 2rem;
 }
 
-.zoom {
+@media screen and (min-width: 992px) {
+    .adress {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+aside {
     display: block;
     width: 300px;
     height: 150px;
     margin: 8%;
+}
+
+@media screen and (min-width: 992px) {
+    aside {
+        width: 200px;
+        margin: 5% 5% 0 5%;
+    }
 }
 
 .image {
@@ -102,6 +130,12 @@ aside img {
     margin: 5% auto 10% auto;
 }
 
+@media screen and (min-width: 992px) {
+    .image {
+        margin: 10% auto;
+    }
+}
+
 .image {
     filter: drop-shadow(8px 8px 3px #aaaaaa73);
 }
@@ -109,4 +143,74 @@ aside img {
 h2 {
     text-align: center;
     font-weight: bolder;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--tertiary);
+    margin: 15% 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    text-align: center
+}
+
+.socialmedia a {
+    display: flex;
+    justify-content: center;
+}
+
+.blacklogo {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.imgsocial {
+    max-width: 30%;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+}
+
+form {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 0 30px 0;
+}
+
+.formulaire {
+    border-radius: 10px;
+    border-color: #e2e2e2;
+    padding: 10px;
+}
+
+.button {
+    margin-left: 60%;
+    border-radius: 10px;
+    border-color: #e2e2e2;
+    padding: 10px;
+    background-color: var(--primary);
+    color: var(--tertiary);
+    font-weight: bold;
+}
+
+.copyright {
+    background-color: var(--primary);
+    color: var(--tertiary);
+    padding: 10px 0 10px 0
+}
+
+footer a {
+    text-decoration: none;
+    color: black
 }
