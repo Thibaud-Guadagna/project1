@@ -48,17 +48,23 @@
       <h2>Ou manger ?</h2>
 
       <section class="group-imgs">
-        <article class="sur-place">
-          <h3>SUR PLACE</h3>
-        </article>
+        <a href="cafeteria.html">
+          <article class="sur-place">
+            <h3>SUR PLACE</h3>
+          </article></a
+        >
+        <a href="exterieur.html">
+          <article class="exterieur">
+            <h3>A L'EXTERIEUR</h3>
+          </article></a
+        >
 
-        <article class="exterieur">
-          <h3>A L'EXTERIEUR</h3>
-        </article>
+        <a href="foodtrucks.html">
+          <article class="foodtruck">
+            <h3>NOS FOODTRUCKS</h3>
+          </article></a
+        >
 
-        <article class="foodtruck">
-          <h3>NOS FOODTRUCKS</h3>
-        </article>
         <div id="deuxiemeTrait"></div>
       </section>
 
@@ -86,8 +92,62 @@
           </div>
         </div>
       </section>
+      <div id="troisiemeTrait"></div>
     </main>
 
-    <footer></footer>
+    <footer>
+      <h2>Contact</h2>
+      <form action="contact" method="post">
+        <section class="nom">
+          <input class="formulaire" type="text" placeholder="Nom" />
+        </section>
+        <section class="prenom">
+          <input class="formulaire" type="text" placeholder="Prénom" />
+        </section>
+        <section class="email">
+          <input class="formulaire" type="email" placeholder="Email" />
+        </section>
+        <section class="objet">
+          <input class="formulaire" type="objet" placeholder="Objet" />
+        </section>
+        <section class="message">
+          <textarea class="formulaire" placeholder="Message"></textarea>
+        </section>
+        <section class="submit">
+          <button class="button" type="submit">Envoyer</button>
+        </section>
+      </form>
+
+      <img
+        class="blacklogo"
+        src="images/LOGO_NOIR_-_WILD_EATS.png"
+        alt="logowild"
+      />
+      <section class="socialmedia">
+        <a href="https://www.facebook.com/" target="”_blank”"
+          ><img
+            class="imgsocial"
+            src="images/iconfacebook.png"
+            alt="logofacebook"
+        /></a>
+        <a href="https://www.instagram.com/" target="”_blank”"
+          ><img
+            class="imgsocial"
+            src="images/iconinstagram.png"
+            alt="logoinstagram"
+        /></a>
+        <a href="https://www.x.com/" target="”_blank”"
+          ><img class="imgsocial" src="images/iconX.png" alt="logox"
+        /></a>
+      </section>
+
+      <a href="mentions-legales.html">
+        <p>Mentions légales</p>
+      </a>
+      <a href="cgv.html"> <p>CGV</p> </a><br />
+      <section class="copyright">
+        <p>&copy Les Geeks - 2025</p>
+      </section>
+    </footer>
   </body>
 </html>

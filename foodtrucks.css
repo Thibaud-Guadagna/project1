@@ -149,7 +149,8 @@ button:active {
     transform: translateY(0);
 }
 
-.copyright {background-color: var(--primary);
+.copyright {
+background-color: var(--);
 color: var(--tertiary);
 padding: 10px 0 10px 0}
 
