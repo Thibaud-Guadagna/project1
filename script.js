@@ -1,11 +1,5 @@
-const sideNav = document.getElementById("burgerBtn");
-
-sideNav.onclick = openNav;
-sideNav.onclick = closeNav;
-
-function openNav() {
-    sideNav.classList.add("active");
-    let isOpen = true
-    console.log(isOpen)
-}
-
+const button = document.getElementById('burgerBtn');
+button.addEventListener('click', () => {
+    const buttons = document.getElementById("openMenu")
+  buttons.classList.toggle('hidden')
+})
