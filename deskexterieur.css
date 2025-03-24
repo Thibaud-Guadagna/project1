@@ -1,0 +1,35 @@
+@media (min-width: 768px) {
+	/* MAIN */
+	.filtres {
+		display: flex;
+		justify-content: center;
+		padding: 0;
+		gap: 2rem;
+		margin: 2% 0 0 0;
+	}
+
+	.adress {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	aside {
+		width: 220px;
+		margin: 5% 5% 0 5%;
+	}
+
+	.image {
+		margin: 10% auto;
+	}
+
+	aside img {
+		height: 8rem;
+	}
+
+	#separation {
+		width: 30rem;
+	}
+}
