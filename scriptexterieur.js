@@ -1,15 +1,18 @@
-const all = document.getElementById("all");
-const asiatique = document.getElementById("asiatique");
-const burger = document.getElementById("burger");
-const italien = document.getElementById("italien");
-const mexicain = document.getElementById("mexicain");
+const buttons = document.querySelectorAll('.filtres button');
 
-let zoom = document.querySelector(".zoom");
 
-all.addEventListener("click", () => {
-    if (getComputedStyle(zoom).display != "none") {
-        zoom.style.display = "none";
-    } else {
-        zoom.style.display = "flex";
-    }
-})
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const category = button.id;
+
+        const asides = document.querySelectorAll('aside');
+
+        asides.forEach(aside => {
+            if (category === 'all' || aside.classList.contains(category)) {
+                aside.style.display = 'block';
+            } else {
+                aside.style.display = 'none';
+            }
+        });
+    });
+});

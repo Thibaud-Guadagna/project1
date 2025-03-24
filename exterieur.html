@@ -10,73 +10,77 @@
     <link rel="shortcut icon" href="/images/flavicon_wild_eats.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="styleexterieur.css">
-    <link rel="script" href="scriptexterieur.js">
+    <script src="scriptexterieur.js"></script>
 </head>
 
 <body>
     <header>
+        <section>
+            <nav>
+                <img class="absolute z-1 h-8 m-5 " src="images/LOGO_-_WILD_EATS.webp">
+                <div id="burgerBtn" class=" absolute z-2 flex flex-col right-5 py-5 h-20 hover:cursor-pointer ">
+                    <div class="bg-[#ff04f4] w-10 h-1 mb-4 flex justify-end"></div>
+                    <div class="bg-[#ff04f4] w-10 h-1 mb-4 flex justify-end"></div>
+                    <div class="bg-[#ff04f4] w-10 h-1 flex justify-end "></div>
+                </div>
+        </section>
+        <section id="openMenu">
+            <div class="absolute">La cafétéria</div>
+            <div class="absolute">À l'extérieur</div>
+            <div class="absolute">Nos Foodtrucks</div>
+            </nav>
 
-        <nav>
-            <img src="/images/LOGO_-_WILD_EATS.webp" alt="logo">
-            <ul>
-                <li>ACCUEIL</li>
-                <li>LA CAFETERIA</li>
-                <li>A L'EXTERIEUR</li>
-                <li>NOS FOODTRUCKS</li>
-            </ul>
-        </nav>
-
-        <div class="flex flex-col justify-center items-center">
-            <img class="relative" src="/images/paul-rysz-bLF3vK_X2Vc-unsplash.jpg" alt="A l'extérieur">
-            <h1 class="absolute bg-white/85 w-full flex justify-center items-center font-montserrat font-bold">
-                A L'EXTERIEUR
-            </h1>
-        </div>
-
+            <div class="flex flex-col justify-center items-center">
+                <img class="relative" src=" images/La cafeteria.jpg" alt="la cafeteria">
+                <h1 class="absolute bg-white/85 w-full flex justify-center items-center font-montserrat font-bold">
+                    A L'EXTERIEUR
+                </h1>
+            </div>
+        </section>
     </header>
 
     <main>
         <section>
             <ul class="filtres">
-                <li><button type="submit" id="all">Tout voir</button></li>
-                <li><button type="submit" id="asiatique">Asiatique</button></li>
-                <li><button type="submit" id="burger">Burger</button></li>
-                <li><button type="submit" id="italien">Italien</button></li>
-                <li><button type="submit" id="mexicain">Mexicain</button></li>
+                <li><button id="all">Tout voir</button></li>
+                <li><button id="asiatique">Asiatique</button></li>
+                <li><button id="burger">Burger</button></li>
+                <li><button id="italien">Italien</button></li>
+                <li><button id="mexicain">Mexicain</button></li>
             </ul>
         </section>
         <section class="adress">
-            <aside class="zoom">
+            <aside class="burger">
                 <h2>Mc Donald's</h2>
                 <div class="image">
                     <a href="https://www.mcdonalds.fr/"><img src="/images/mcdo.jpg" alt="Mc Donald's"></a>
                 </div>
             </aside>
-            <aside class="zoom">
+            <aside class="italien">
                 <h2>Domino's pizza</h2>
                 <div class="image">
                     <a href="https://www.dominos.fr/"><img src="/images/domino-s-pizza.jpg" alt="Domino's pizza"></a>
                 </div>
             </aside>
-            <aside class="zoom">
+            <aside class="asiatique">
                 <h2>Su and shi</h2>
                 <div class="image">
                     <a href="https://www.suandshi.com/"><img src="/images/Su and shi.jpg" alt="Su and shi"></a>
                 </div>
             </aside>
-            <aside class="zoom">
+            <aside class="burger">
                 <h2>Burger king</h2>
                 <div class="image">
                     <a href="https://www.burgerking.fr/"><img src="/images/Burger king.jpeg" alt="Burger king"></a>
                 </div>
             </aside>
-            <aside class="zoom">
+            <aside class="mexicain">
                 <h2>O'tacos</h2>
                 <div class="image">
                     <a href="https://o-tacos.com/"><img src="/images/O_tacos.jpeg" alt="O'tacos"></a>
                 </div>
             </aside>
-            <aside class="zoom">
+            <aside class="asiatique">
                 <h2>Wok to Walk</h2>
                 <div class="image">
                     <a href="https://www.woktowalk.com/fr"><img src="/images/wok to walk.jpeg" alt="Wok to Walk"></a>
@@ -86,7 +90,35 @@
     </main>
 
     <footer>
+        <h2>Contact</h2>
+        <form action="contact" method="post">
+            <input class="formulaire" type="text" placeholder="Nom">
+            <input class="formulaire" type="text" placeholder="Prénom">
+            <input class="formulaire" type="email" placeholder="Email">
+            <input class="formulaire" type="objet" placeholder="Objet">
+            <textarea class="formulaire" placeholder="Message"></textarea>
+            <button class="button" type="submit">Envoyer</button>
+        </form>
 
+        <img class="blacklogo" src="images/LOGO_NOIR_-_WILD_EATS.png" alt="logowild">
+        <section class="socialmedia">
+            <a href="https://www.facebook.com/" target=”_blank”><img class="imgsocial" src="images/iconfacebook.png"
+                    alt="logofacebook"></a>
+            <a href="https://www.instagram.com/" target=”_blank”><img class="imgsocial" src="images/iconinstagram.png"
+                    alt="logoinstagram"></a>
+            <a href="https://www.x.com/" target=”_blank”><img class="imgsocial" src="images/iconX.png" alt="logox"></a>
+        </section>
+
+
+        </a><br>
+        <section class="copyright">
+            <a href="mentions-legales.html">
+                <p>Mentions légales</p>
+            </a>
+            <a href="cgv.html">
+                <p>CGV</p>
+                <p>&copy Les Geeks - 2025</p>
+        </section>
     </footer>
 
 </body>
