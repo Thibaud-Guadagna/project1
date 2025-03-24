@@ -18,22 +18,30 @@
 <body class="bg-[#e9e9e9]">
     <header>
         <section>
-            <nav>
-                <img class="absolute z-1 h-8 m-5 " src="images/logo wildeatq.png">
-                <div id="burgerBtn" class=" absolute z-100 flex flex-col right-5 py-5 hover:cursor-pointer ">
-                    <div id="barre1" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300">
+            <nav class=" fixed top-0 left-0 w-full flex justify-between md:flex-row-reverse">
+                <img class="z-1 h-8 m-5" src="images/logo wildeatq.png">
+                <div id="burgerBtn" class="z-999999 flex flex-col right-5 py-5 hover:cursor-pointer md: p-5 ">
+                    <div id="barre1" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
                     </div>
-                    <div id="barre2" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300">
+                    <div id="barre2" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
                     </div>
-                    <div id="barre3" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300">
+                    <div id="barre3" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
                     </div>
                 </div>
             </nav>
             <nav>
         </section>
         <section id="openMenu"
-            class=" translate-x-full duration-300 ease-in-out flex flex-col justify-center items-center content-[50%] gap-[80px] z-2 bg-[#e9e9e9]/90 fixed right-0 h-full w-[50%] z-50  ">
+            class="flex flex-col justify-center items-center content-[50%] gap-[80px] bg-[#e9e9e9]/90 fixed right-0 h-full w-[40%] z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
             <div>
+                <div id="burgerBtn1" class="absolute top-0 flex flex-col right-0 py-5 hover:cursor-pointer md: p-5 ">
+                    <div id="barre1" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                    <div id="barre2" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                    <div id="barre3" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                </div>
                 <a href="cafeteria.html" class="group relative block">
                     <h2 class="group relative hover:text-[#ff04f4]">La cafétéria</h2>
                     <div class="absolute bg-[#ff04f4] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
@@ -58,7 +66,7 @@
         </nav>
 
         <div class="flex flex-col justify-center items-center">
-            <img class="relative" src=" images/La cafeteria.jpg" alt="la cafeteria">
+            <img class="w-full h-screen object-cover" src=" images/La cafeteria.jpg" alt="la cafeteria">
             <h1 class="absolute bg-white/85 w-full flex justify-center items-center font-montserrat font-bold">
                 LA
                 CAFÉTÉRIA
