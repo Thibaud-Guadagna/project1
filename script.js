@@ -1,3 +1,4 @@
+// Menu Burger //
 const button = document.getElementById('burgerBtn');
 const button1 = document.getElementById('burgerBtn1');
 const bar1 = document.getElementById('barre1');
@@ -33,6 +34,25 @@ button1.addEventListener('click', () => {
   bar3.classList.toggle('-rotate-45')
   bar3.classList.toggle('-translate-y-2.5')
 })
+
+// Panier //
+
+const openbtn = document.getElementById('pictopanier');
+const closebtn = document.getElementById('closebtn');
+const sideBar = document.getElementById('panier');
+
+
+openbtn.addEventListener('click', () => {
+    sideBar.classList.remove('right-[-300px]');
+    sideBar.classList.add('right-0');
+});
+
+
+closebtn.addEventListener('click', () => {
+    sideBar.classList.remove('right-0');
+    sideBar.classList.add('right-[-300px]');
+});
+
 
 
 

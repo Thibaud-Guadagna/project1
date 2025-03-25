@@ -1,3 +1,6 @@
-.add {
-    color: black;
+@media (min-width: 768px) {
+  p {
+    width: 100%;
+  }
+  
 }
