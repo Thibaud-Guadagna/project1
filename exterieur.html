@@ -115,60 +115,84 @@
         <div id="separation"></div>
     </main>
 
-    <footer>
-        <h2>Contact</h2>
-        <form action="contact" method="post">
-          <section class="nom">
-            <input class="formulaire" type="text" placeholder="Nom" />
-          </section>
-          <section class="prenom">
-            <input class="formulaire" type="text" placeholder="Prénom" />
-          </section>
-          <section class="email">
-            <input class="formulaire" type="email" placeholder="Email" />
-          </section>
-          <section class="objet">
-            <input class="formulaire" type="objet" placeholder="Objet" />
-          </section>
-          <section class="message">
-            <textarea class="formulaire" placeholder="Message"></textarea>
-          </section>
-          <section class="submit">
-            <button class="button" type="submit">Envoyer</button>
-          </section>
+      <!-- FOOTER -->
+
+      <footer>
+        <h2 class="titre2">Contact</h2>
+        <form id="formemail">
+            <section class="nom">
+            <input class="formulaire" type="text" name="name" id="nom" placeholder="Nom" required></section>
+            <section class="prenom">
+            <input class="formulaire" type="text" name="prenom" id="prenom" placeholder="Prénom" required></section>
+            <section class="email">
+            <input class="formulaire" type="email" name="email" id="email" placeholder="Email" required></section>
+            <section class="email">
+            <input class="formulaire" type="text" name="objet" id="objet" placeholder="Objet" required></section>
+            <section class="message">
+                
+            <textarea class="formulaire" name="message" id="message" placeholder="Votre message" required></textarea></section>
+            <section class="submit">
+            <button class="button" type="submit" id="buttonemail">Envoyer</button></section>
         </form>
-  
-        <img
-          class="blacklogo"
-          src="images/LOGO_NOIR_-_WILD_EATS.png"
-          alt="logowild"
-        />
-        <section class="socialmedia">
-          <a href="https://www.facebook.com/" target="”_blank”"
-            ><img
-              class="imgsocial"
-              src="images/iconfacebook.png"
-              alt="logofacebook"
-          /></a>
-          <a href="https://www.instagram.com/" target="”_blank”"
-            ><img
-              class="imgsocial"
-              src="images/iconinstagram.png"
-              alt="logoinstagram"
-          /></a>
-          <a href="https://www.x.com/" target="”_blank”"
-            ><img class="imgsocial" src="images/iconX.png" alt="logox"
-          /></a>
-        </section>
-  
-        <a href="mentions-legales.html">
-          <p>Mentions légales</p>
-        </a>
-        <a href="cgv.html"> <p>CGV</p> </a><br />
-        <section class="copyright">
-          <p>&copy Les Geeks - 2025</p>
-        </section>
-      </footer>
+
+      <img
+        class="blacklogo"
+        src="images/LOGO_NOIR_-_WILD_EATS.png"
+        alt="logowild"
+      />
+      <section class="socialmedia">
+        <a href="https://www.facebook.com/" target="”_blank”"
+          ><img
+            class="imgsocial"
+            src="images/iconfacebook.png"
+            alt="logofacebook"
+        /></a>
+        <a href="https://www.instagram.com/" target="”_blank”"
+          ><img
+            class="imgsocial"
+            src="images/iconinstagram.png"
+            alt="logoinstagram"
+        /></a>
+        <a href="https://www.x.com/" target="”_blank”"
+          ><img class="imgsocial" src="images/iconX.png" alt="logox"
+        /></a>
+      </section>
+      <section class="copyright">
+      <a href="mentions-legales.html">
+        <p>Mentions légales</p>
+      </a>
+      <a href="cgv.html"> <p>CGV</p> </a><br />
+      
+        <p>&copy Les Geeks - 2025</p>
+      </section>
+    </footer>
+    
+    <!-- CODE POUR LE FORMULAIRE DE CONTACT -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        ( function ()
+        {
+            emailjs.init( "OE9-cl3x3ZPw4LHSZ" ); // Remplace si besoin par ta Public Key exacte
+        } )();
+
+        const form = document.getElementById( "formemail" );
+
+        form.addEventListener( "submit", function ( e )
+        {
+            e.preventDefault();
+
+            emailjs.sendForm( "service_f6pnqxa", "wildeats", this )
+                .then( () =>
+                {
+                    alert( "Message envoyé !" );
+                }, ( error ) =>
+                {
+                    console.error( "Erreur EmailJS :", error );
+                    alert( "Erreur à l’envoi : " + JSON.stringify( error ) );
+                } );
+        } );
+    </script>
+<!-- FIN DU FOOTER ET DU CODE POUR LE FORMULAIRE DE CONTACT -->
 </body>
 
 </html>

@@ -1,12 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@font-face {
+	font-family: "Montserrat";
+	src: url("https://fonts.google.com/specimen/Montserrat?query=Montserrat");
+}
 
 body {
 	margin: 0;
-	background-color: #e9e9e9;
+	background-color: #fafafa;
 }
 
 h1 {
-	font-family: "montserrat";
 	text-align: center;
 	font-weight: bolder;
 }
@@ -14,12 +16,6 @@ h1 {
 .adress h2 {
 	text-align: center;
 	font-weight: bolder;
-}
-
-p,
-button,
-footer {
-	font-family: "Source Sans 3";
 }
 
 /* MAIN */
@@ -58,7 +54,7 @@ footer {
 }
 
 .filtres button:focus {
-	background-color: #f7146b;
+	background-color: #d30fc3;
 	border-color: rgba(0, 0, 0, 0.15);
 	box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 	color: white;
@@ -66,12 +62,12 @@ footer {
 
 .filtres button:hover {
 	transform: translateY(-1px);
-	background-color: #f7146b;
+	background-color: #d30fc3;
 	color: white;
 }
 
 .filtres button:active {
-	background-color: #f7146b;
+	background-color: #d30fc3;
 	border-color: rgba(0, 0, 0, 0.15);
 	box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
 	color: white;
@@ -146,10 +142,9 @@ footer p {
 	padding: 2px;
 }
 footer h2 {
-	color: #f7146b;
+	color: #d30fc3;
 	text-align: center;
 	margin-top: 1em;
-	font-family: "Montserrat";
 	font-size: 1.5rem;
 	font-weight: 700;
 }
@@ -178,14 +173,13 @@ footer section {
 	border-left-width: 1px;
 	border-right-width: 1px;
 	margin: .5em 0;
-	font-family: "Montserrat";
 }
 
 .button {
 	border-radius: 10px;
 	padding: 10px 20px;
 	font-weight: bold;
-	background-color: #f7146b;
+	background-color: #d30fc3;
 	color: white;
 }
 .submit {
@@ -196,12 +190,12 @@ footer section {
 
 button:hover {
 	transform: translateY(-1px);
-	background-color: #f7146b;
+	background-color: #d30fc3;
 	color: white;
 }
 
 button:active {
-	background-color: #f7146b;
+	background-color: #d30fc3;
 	border-color: rgba(0, 0, 0, 0.15);
 	box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
 	color: white;
@@ -209,14 +203,11 @@ button:active {
 }
 
 .copyright {
-	background-color: #f7146b;
+	display: flex;
+	flex-direction: column;
+	background-color: #d30fc3;
 	color: white;
 	padding: 10px 0 10px 0;
-}
-
-footer a {
-	text-decoration: none;
-	color: black;
 }
 
 @media screen and (min-width: 606px) {
