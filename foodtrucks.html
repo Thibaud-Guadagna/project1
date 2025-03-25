@@ -13,20 +13,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.google.com/specimen/Montserrat?query=Montserrat" rel="stylesheet">
     <script src="script.js" defer></script>
-    
-    <!-- CODE POUR LE FORMULAIRE DE CONTACT -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init({
-                publicKey: "OE9-cl3x3ZPw4LHSZ",
-            });
-        })();
-    </script>
-<!-- FIN DU CODE POUR LE FORMULAIRE DE CONTACT -->
 
-<script src="scriptfoodtrucks.js"></script>
+
     <title>Wild Code School | Devenez un expert de la tech</title>
 
 </head>
@@ -172,26 +160,21 @@
 
     <footer>
         <h2 class="titre2">Contact</h2>
-      <form action="contact" method="post">
-        <section class="nom">
-          <input class="formulaire" type="text" placeholder="Nom" />
-        </section>
-        <section class="prenom">
-          <input class="formulaire" type="text" placeholder="Prénom" />
-        </section>
-        <section class="email">
-          <input class="formulaire" type="email" placeholder="Email" />
-        </section>
-        <section class="objet">
-          <input class="formulaire" type="objet" placeholder="Objet" />
-        </section>
-        <section class="message">
-          <textarea class="formulaire" placeholder="Message"></textarea>
-        </section>
-        <section class="submit">
-          <button class="button" type="submit">Envoyer</button>
-        </section>
-      </form>
+        <form id="formemail">
+            <section class="nom">
+            <input class="formulaire" type="text" name="name" id="nom" placeholder="Nom" required></section>
+            <section class="prenom">
+            <input class="formulaire" type="text" name="prenom" id="prenom" placeholder="Prénom" required></section>
+            <section class="email">
+            <input class="formulaire" type="email" name="email" id="email" placeholder="Email" required></section>
+            <section class="email">
+            <input class="formulaire" type="text" name="objet" id="objet" placeholder="Objet" required></section>
+            <section class="message">
+                
+            <textarea class="formulaire" name="message" id="message" placeholder="Votre message" required></textarea></section>
+            <section class="submit">
+            <button class="button" type="submit" id="buttonemail">Envoyer</button></section>
+        </form>
 
       <img
         class="blacklogo"
@@ -224,6 +207,33 @@
         <p>&copy Les Geeks - 2025</p>
       </section>
     </footer>
+    
+    <!-- CODE POUR LE FORMULAIRE DE CONTACT -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        ( function ()
+        {
+            emailjs.init( "OE9-cl3x3ZPw4LHSZ" ); // Remplace si besoin par ta Public Key exacte
+        } )();
+
+        const form = document.getElementById( "formemail" );
+
+        form.addEventListener( "submit", function ( e )
+        {
+            e.preventDefault();
+
+            emailjs.sendForm( "service_f6pnqxa", "wildeats", this )
+                .then( () =>
+                {
+                    alert( "Message envoyé !" );
+                }, ( error ) =>
+                {
+                    console.error( "Erreur EmailJS :", error );
+                    alert( "Erreur à l’envoi : " + JSON.stringify( error ) );
+                } );
+        } );
+    </script>
+<!-- FIN DU FOOTER ET DU CODE POUR LE FORMULAIRE DE CONTACT -->
 </body>
 
 </html>
