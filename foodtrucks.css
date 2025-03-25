@@ -62,7 +62,8 @@ h3, h4 {font-weight: bold;}
     align-items: center;
     flex-direction: column;
     padding: 15px;
-    box-shadow:  1px 1px 10px #d1d0d073;
+    box-shadow:  3px 3px 9px #0000003b;
+    background-color: white;
     
 
 }
@@ -83,7 +84,7 @@ h3, h4 {font-weight: bold;}
 #troisiemeTrait {
     height: 2px;
     width: 15em;
-    margin: 3em auto 0 auto;
+    margin: 5em auto 0 auto;
     background-color: #4b4b4b;
 }
 
@@ -142,6 +143,7 @@ footer section{
 	border-left-width: 1px;
 	border-right-width: 1px;
 	margin: .5em 0;
+    background-color: white;
 }
 
 .button {
