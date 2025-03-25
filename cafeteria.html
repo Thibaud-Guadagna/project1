@@ -21,9 +21,12 @@
             <nav>
                 <img class="absolute z-1 h-8 m-5 " src="images/logo wildeatq.png">
                 <div id="burgerBtn" class=" absolute z-100 flex flex-col right-5 py-5 hover:cursor-pointer ">
-                    <div class="bg-white w-7 h-0.5 mb-2 flex justify-end"></div>
-                    <div class="bg-white w-7 h-0.5 mb-2 flex justify-end"></div>
-                    <div class="bg-white w-7 h-0.5 mb-2 flex justify-end "></div>
+                    <div id="barre1" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300">
+                    </div>
+                    <div id="barre2" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300">
+                    </div>
+                    <div id="barre3" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300">
+                    </div>
                 </div>
             </nav>
             <nav>
@@ -64,15 +67,15 @@
         <section>
             <nav>
                 <div>
-                    <ul class="flex justify-between m-2 font-montserrat">
+                    <ul class="flex justify-around mt-4 font-montserrat">
                         <li id=#entree class=" group relative hover:text-[#ff04f4] group-hover:underline">
                             <button>Entrées</button>
                             <div
                                 class="absolute bg-[#ff04f4] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
                             </div>
                         </li>
-                        <li id="plat" class=" group relative hover:text-[#ff04f4] group-hover:underline">
-                            <button>Plats</button>
+                        <li class=" group relative hover:text-[#ff04f4] group-hover:underline">
+                            <a href="#plats">Plats</a>
                             <div
                                 class="absolute bg-[#ff04f4] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
                             </div>
@@ -83,8 +86,8 @@
                                 class="absolute bg-[#ff04f4] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
                             </div>
                         </li>
-                        <li id="boissons" class=" group relative hover:text-[#ff04f4] group-hover:underline">
-                            <button>Boissons</button>
+                        <li class=" group relative hover:text-[#ff04f4] group-hover:underline">
+                            <a href="#boissons">Boissons</a>
                             <div
                                 class="absolute bg-[#ff04f4] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
                             </div>
@@ -112,7 +115,10 @@
                     </div>
                 </li>
                 <li class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/saladeveggie.jpg">
+                    <div
+                        class="bouton bg-[url('images/saladeveggie.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col justify-start  flex-1 w-full p-8">
                         <h3 class="text-xl ">Salade Méditérranéenne (VEGAN)</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -122,8 +128,11 @@
                             vinaigre balsamique.</p>
                     </div>
                 </li>
-                <li class="flex flex-row-reverse">
-                    <img class="h-35 w350 m-5 shadow-2xl rounded-lg" src="images/kebab.jpg">
+                <li id="plats" class="flex flex-row-reverse">
+                    <div
+                        class="bouton bg-[url('images/kebab.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col justify-start  flex-1 w-full p-8">
                         <h3 class="text-xl ">Kebab</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -133,10 +142,13 @@
                     </div>
                 </li>
                 <li>
-                    <h2 class="text-2xl ml-5">Pizzas</h2>
+                    <h2 class="text-2xl ml-5 mt-6 font-bold">Pizzas</h2>
                 </li>
                 <li class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/pizza margherita.jpg">
+                    <div
+                        class="bouton bg-[url('images/pizza margherita.jpg')] bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Pizza Margherita</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -147,7 +159,10 @@
                 </li>
 
                 <li class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/pizzaformage.jpg">
+                    <div
+                        class="bouton bg-[url('images/pizzaformage.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Pizza 4 fromages</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -156,7 +171,10 @@
                     </div>
                 </li>
                 <li class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/pizzaveggie.jpg">
+                    <div
+                        class="bouton bg-[url('images/pizzaveggie.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Pizza Veggie</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -165,12 +183,15 @@
                     </div>
                 </li>
                 <li>
-                    <h2 class="text-2xl ml-5">Burger</h2>
+                    <h2 class="text-2xl ml-5 mt-6 font-bold">Burger</h2>
 
                 </li>
 
                 <li class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/Burger.jpeg">
+                    <div
+                        class="bouton bg-[url('images/Burger.jpeg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Cheeseburger</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -180,7 +201,10 @@
                     </div>
                 </li>
                 <li class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/baconburger.jpg">
+                    <div
+                        class="bouton bg-[url('images/baconburger.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Bacon Burger</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -189,7 +213,10 @@
                     </div>
                 </li>
                 <li class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/veganburger.jpg">
+                    <div
+                        class="bouton bg-[url('images/veganburger.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Vegan Burger</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -199,10 +226,13 @@
                     </div>
                 </li>
                 <li>
-                    <h2 class="text-2xl ml-5">Paninis</h2>
+                    <h2 class="text-2xl ml-5 mt-6 font-bold">Paninis</h2>
                 </li>
                 <li class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/paninijf.jpg">
+                    <div
+                        class="bouton bg-[url('images/paninijf.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col w-full  flex-1 w-full p-8">
                         <h3 class="text-xl ">Panini Jambon-Fromage</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -211,7 +241,10 @@
                     </div>
                 </li>
                 <li class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/paninipoulet.jpg">
+                    <div
+                        class="bouton bg-[url('images/paninipoulet.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Panini Poulet Pesto</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -220,7 +253,10 @@
                     </div>
                 </li>
                 <li class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/paninicm.jpg">
+                    <div
+                        class="bouton bg-[url('images/paninicm.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Panini Chèvre-Miel</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -229,7 +265,10 @@
                     </div>
                 </li>
                 <li class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/paninipeperoni.jpg">
+                    <div
+                        class="bouton bg-[url('images/paninipeperoni.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Panini Pepperoni</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -238,7 +277,10 @@
                     </div>
                 </li>
                 <li class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/paninivegan.jpg">
+                    <div
+                        class="bouton bg-[url('images/paninivegan.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Panini Légumes Grillés (VEGAN)</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -247,7 +289,10 @@
                     </div>
                 </li>
                 <li id="dessert" class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/tiramisu.jpg">
+                    <div
+                        class="bouton bg-[url('images/tiramisu.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Tiramisu Maison</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -256,7 +301,10 @@
                     </div>
                 </li>
                 <li class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/compote.jpeg">
+                    <div
+                        class="bouton bg-[url('images/compote.jpeg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col flex-1 w-full p-8">
                         <h3 class="text-xl ">Compote de Pommes & Cannelle</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -266,7 +314,10 @@
                     </div>
                 </li>
                 <li class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/saladefruit.jpg">
+                    <div
+                        class="bouton bg-[url('images/saladefruit.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Salade de Fruits Frais</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -274,8 +325,11 @@
                         <p class="italic">Mélange coloré de fruits de saison.</p>
                     </div>
                 </li>
-                <li class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/eau.jpg">
+                <li id="boissons" class="flex flex-row-reverse">
+                    <div
+                        class="bouton bg-[url('images/eau.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Eau minérale</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -283,7 +337,10 @@
                     </div>
                 </li>
                 <li class="flex flex-row-reverse">
-                    <img class="h-35 w-40 m-5 shadow-2xl rounded-lg" src="images/sodas.jpg">
+                    <div
+                        class="bouton bg-[url('images/sodas.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-lg ">Soda (Coca-Cola, Fanta, Sprite)</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -291,7 +348,10 @@
                     </div>
                 </li>
                 <li class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/theglace.jpeg">
+                    <div
+                        class="bouton bg-[url('images/theglace.jpeg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Thé glacé maison</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -299,7 +359,10 @@
                     </div>
                 </li>
                 <li class="flex flex-row-reverse">
-                    <img class="h-35 w-35 m-5 shadow-2xl rounded-lg" src="images/smoothie.jpg">
+                    <div
+                        class="bouton bg-[url('images/smoothie.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12 mb-12">
+                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                    </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Smoothie (Mangue & Fruits Rouges)</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
