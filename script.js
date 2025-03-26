@@ -37,22 +37,29 @@ button1.addEventListener('click', () => {
 
 // Panier //
 
-const openbtn = document.getElementById('pictopanier');
-const closebtn = document.getElementById('closebtn');
-const sideBar = document.getElementById('panier');
+document.addEventListener('DOMContentLoaded', function () {
+  const openbtn = document.getElementById('pictopanier');
+  const closebtn = document.getElementById('closebtn');
+  const sideBar = document.getElementById('panier');
 
+  openbtn.addEventListener('click', () => {
+      console.log("Ouverture du panier");
+      sideBar.classList.toggle('translate-x-full');
+  });
 
-openbtn.addEventListener('click', () => {
-    sideBar.classList.remove('right-[-300px]');
-    sideBar.classList.add('right-0');
+  closebtn.addEventListener('click', () => {
+      console.log("Fermeture du panier");
+      sideBar.classList.add('translate-x-full');
+  });
 });
 
-
-closebtn.addEventListener('click', () => {
-    sideBar.classList.remove('right-0');
-    sideBar.classList.add('right-[-300px]');
-});
-
+// Bouton Commander //
+const boutoncommander = document.querySelector(".boutoncommander");
+boutoncommander.addEventListener("click", () =>{
+             
+                    alert( "Votre commande a bien été prise en compte. \n Elle sera disponible dans 30 minutes à la caféteria. \n Réglement sur place.\n Merci" );
+})
+              
 
 
 
