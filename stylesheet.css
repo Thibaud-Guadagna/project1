@@ -1,3 +1,15 @@
-.add {
-    color: black;
+@media (min-width: 768px) {
+  p {
+    width: 100%;
+  }
+  
+}
+
+.itemPanier {
+  font-size: small;
+}
+
+.boutoncommander:hover .group-hover\:scale-x-100 {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

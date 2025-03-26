@@ -4,120 +4,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Les Geeks">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.google.com/specimen/Montserrat?query=Montserrat">
     <script src="script.js" defer></script>
+    <script src="panier1.js" defer></script>
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="shortcut icon" href="/images/flavicon_wild_eats.ico" type="image/x-icon">
 
 
 
 
-    <title>La cafétéria</title>
+    <title>WILDEATS | LA CAFÉTÉRIA</title>
 </head>
 
-<body class="bg-[#e9e9e9]">
+<body class="bg-[#fafafa]">
     <header>
         <section>
-            <nav>
-                <img class="absolute z-1 h-8 m-5 " src="images/logo wildeatq.png">
-                <div id="burgerBtn" class=" absolute z-100 flex flex-col right-5 py-5 hover:cursor-pointer ">
-                    <div id="barre1" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300">
+            <!-- Icône du Panier avec compteur -->
+            <div class="fixed right-5 top-3.5 z-[999999] flex items-center w-12 mr-8 mt-2 h-auto md:left-0 md:ml-20 md:top-4">
+                <img id="pictopanier" class="w-auto h-8 cursor-pointer" src="images/picto panier.svg" alt="panier">
+                <span id="count" class="indicateur cart-icon bg-[#d30fc3] mr-5 text-white text-xs font-bold w-5 h-5 flex items-center justify-center 
+                             rounded-full absolute top-0 right-0 translate-x-1/2 -translate-y-1/2" value="0">
+                    0
+                </span>
+            </div>
+        
+            <!-- Sidebar -->
+            <section id="panier" 
+                class="sideBar w-[250px] h-full fixed top-0 right-0 bg-white/90 
+                       transform translate-x-full transition-transform duration-300 ease-in-out z-[999999] p-[20px] flex flex-col">
+                
+                <div class="sidebar-close flex justify-end cursor-pointer">
+                    <button id="closebtn" class="ml-auto text-2xl text">X</button>
+                </div>
+        
+                <!-- Menu du Panier -->
+                <div class="menuPanier flex flex-col gap-2 mt-2 font-bold">
+                    <h2 class="text-2xl">Mon Panier</h2>
+                </div>
+    
+                <div class="itemPanier flex justify-between p-3"></div>
+        
+                <div class="sideBarfooter mt-auto">
+                    <div class="total flex items-center justify-between pb-3">
+                        <h4 class="font-bold">Total :</h4>
+                        <div class="Montant">0,00€</div>
                     </div>
-                    <div id="barre2" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300">
+                    <button class="boutoncommander w-full mt-2 border-2 rounded-lg bg-[#d30fc3] 
+                    text-white text-xl font-bold h-12 inline-flex items-center justify-center rounded-md px-6 font-medium text-neutral-50 relative group transition active:scale-110">
+    Commander
+    <div class="absolute bg-white w-0 h-[2px] transition-all duration-300 group-hover:w-[54%] bottom-2 left-12"></div>
+</button>
+                </div>
+            </section>
+        </section>        
+        <!--Burger Icone-->
+            <nav class="fixed w-full flex justify-between md:flex-row-reverse bg-black">
+                <img class="z-1 h-8 m-5" src="images/logo wildeatq.png">
+                <div id="burgerBtn" class="z-999999 flex flex-col right-5 py-5 hover:cursor-pointer md: p-5 mt-2 ">
+                    <div id="barre1" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
                     </div>
-                    <div id="barre3" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300">
+                    <div id="barre2" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                    <div id="barre3" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
                     </div>
                 </div>
             </nav>
-            <nav>
         </section>
+        <!--Menu ouvrant-->
         <section id="openMenu"
-            class=" translate-x-full duration-300 ease-in-out flex flex-col justify-center items-center content-[50%] gap-[80px] z-2 bg-[#e9e9e9]/90 fixed right-0 h-full w-[50%] z-50  ">
+            class="flex flex-col justify-center items-center content-[50%] gap-[80px] bg-[#e9e9e9]/90 fixed right-0 h-full w-[45%] z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
             <div>
+                <div id="burgerBtn1" class="absolute top-0 flex flex-col right-0 py-5 hover:cursor-pointer md: p-5 ">
+                    <div id="barre1" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                    <div id="barre2" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                    <div id="barre3" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                </div>
                 <a href="cafeteria.html" class="group relative block">
-                    <h2 class="group relative hover:text-[#ff04f4]">La cafétéria</h2>
-                    <div class="absolute bg-[#ff04f4] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
+                    <h2 class="group relative hover:text-[#d30fc3]">La cafétéria</h2>
+                    <div class="bg-[#d30fc3] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
                     </div>
                 </a>
             </div>
             <div>
                 <a href="exterieur.html" class="group relative block">
-                    <h2 class="hover:text-[#ff04f4]">À l'extérieur</h2>
-                    <div class="absolute bg-[#ff04f4] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
+                    <h2 class="hover:text-[#d30fc3]">À l'extérieur</h2>
+                    <div class="bg-[#d30fc3] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
                     </div>
                 </a>
             </div>
             <div>
-                <a href="foodtruck.html" class="group relative block">
-                    <h2 class="hover:text-[#ff04f4]">Nos Foodtrucks</h2>
-                    <div class="absolute bg-[#ff04f4] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
+                <a href="foodtrucks.html" class="group relative block">
+                    <h2 class="hover:text-[#d30fc3]">Nos Foodtrucks</h2>
+                    <div class="bg-[#d30fc3] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
                     </div>
                 </a>
             </div>
         </section>
         </nav>
-
-        <div class="flex flex-col justify-center items-center">
-            <img class="relative" src=" images/La cafeteria.jpg" alt="la cafeteria">
-            <h1 class="absolute bg-white/85 w-full flex justify-center items-center font-montserrat font-bold">
+<!-- H1 -->
+        <div class="bg-[url('images/Lacafeteria.jpg')] flex justify-center items-center text-center bg-cover bg-contain bg-no-repeat h-74 w-screen md:h-125 md:bg-cover md:bg-center md:bg-no-repeat">
+            <h1 class="bg-white/85 w-full mt-18 font-montserrat font-bold text-lg tracking-[0.15rem] md:text-2xl">
                 LA
                 CAFÉTÉRIA
-            </h1>
+            </h1> 
         </div>
-        <section>
-            <nav>
+    </header>
+        <section class="sticky top-19 bg-[#fafafa] md:mt-10 md:bg-auto md:bg-top md:h-0">
+            <nav class="p-4">
                 <div>
-                    <ul class="flex justify-around mt-4 font-montserrat">
-                        <li id=#entree class=" group relative hover:text-[#ff04f4] group-hover:underline">
+                    <ul class="flex justify-around font-montserrat md:flex md:flex-col md:gap-[30px] md:h-3 md:w-[6%] md:m-1">
+                        <li id=#entree class=" group relative hover:text-[#d30fc3] group-hover:underline">
                             <button>Entrées</button>
                             <div
-                                class="absolute bg-[#ff04f4] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
+                                class="bg-[#d30fc3] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
                             </div>
                         </li>
-                        <li class=" group relative hover:text-[#ff04f4] group-hover:underline">
+                        <li class=" group relative hover:text-[#d30fc3] group-hover:underline">
                             <a href="#plats">Plats</a>
                             <div
-                                class="absolute bg-[#ff04f4] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
+                                class="bg-[#d30fc3] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
                             </div>
                         </li>
-                        <li class=" group relative hover:text-[#ff04f4] group-hover:underline">
+                        <li class=" group relative hover:text-[#d30fc3] group-hover:underline">
                             <a href="#dessert">Desserts</a>
                             <div
-                                class="absolute bg-[#ff04f4] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
+                                class="bg-[#d30fc3] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
                             </div>
                         </li>
-                        <li class=" group relative hover:text-[#ff04f4] group-hover:underline">
+                        <li class=" group relative hover:text-[#d30fc3] group-hover:underline">
                             <a href="#boissons">Boissons</a>
                             <div
-                                class="absolute bg-[#ff04f4] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
+                                class="bg-[#d30fc3] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
                             </div>
                         </li>
                     </ul>
                 </div>
             </nav>
         </section>
-    </header>
+    
     </section>
-    <section id="carte">
+    <section class="carte">
         <div>
-            <ul class="list-none">
-                <li class="flex flex-row-reverse">
+            <ul class="list-none md:m-20 md:flex md:flex-wrap md:flex-row md:justify-around md:mt-5 md:ml-25 md:pl-3">
+                <li class="w-full">
+                    <h2 class="text-2xl ml-5 mt-6 font-bold md:block">Entrées</h2>
+                </li>
+                <li class="flex flex-row-reverse w-full md:flex md:flex-col md:items-center md:w-[200px] md:mt-0">
+                    
                     <div
-                        class="bouton bg-[url('images/saladecesar.jpg')] bg-cover bg-center flex items-end justify-end relative w-35 h-35 mr-5 rounded-lg mt-6">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        class="bg-[url('images/saladecesar.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-6 md:ml-5">
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="7" name="Salade César">+</button>
+                        
                     </div>
-                    <div class="flex flex-col justify-start flex-1 w-full p-8">
+                    <div class="flex flex-col justify-start  flex-1 w-full p-8 md:items-center">
                         <h3 class="text-xl">Salade César</h3>
-                        <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
+                        <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2 md:self-center"></div>
                         <h4>7,00€</h4>
-                        <p class="text-xs italic">Laitue croquante, poulet grillé, croûtons dorés, parmesan, sauce césar
+                        <p class="text-xs italic w-40">Laitue croquante, poulet grillé, croûtons dorés, parmesan, sauce césar
                             maison.</p>
                     </div>
                 </li>
-                <li class="flex flex-row-reverse">
+                <li class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:-mt-6">
                     <div
                         class="bouton bg-[url('images/saladeveggie.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="6.50" name="Salade Méditérranéenne">+</button>
                     </div>
                     <div class="flex flex-col justify-start  flex-1 w-full p-8">
                         <h3 class="text-xl ">Salade Méditérranéenne (VEGAN)</h3>
@@ -128,10 +183,10 @@
                             vinaigre balsamique.</p>
                     </div>
                 </li>
-                <li id="plats" class="flex flex-row-reverse">
+                <li id="plats" class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:-mt-6">
                     <div
                         class="bouton bg-[url('images/kebab.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="8.50" name="Kebab">+</button>
                     </div>
                     <div class="flex flex-col justify-start  flex-1 w-full p-8">
                         <h3 class="text-xl ">Kebab</h3>
@@ -141,15 +196,15 @@
                             maison.</p>
                     </div>
                 </li>
-                <li>
-                    <h2 class="text-2xl ml-5 mt-6 font-bold">Pizzas</h2>
+                <li class="w-full">
+                    <h2 class="text-2xl ml-5 mt-6 font-bold md:block">Pizzas</h2>
                 </li>
-                <li class="flex flex-row-reverse">
+                <li class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:mt-0">
                     <div
-                        class="bouton bg-[url('images/pizza margherita.jpg')] bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        class="bouton bg-[url('images/pizzamargherita.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="9.50" name="Pizza Margherita">+</button>
                     </div>
-                    <div class="flex flex-col  flex-1 w-full p-8">
+                    <div class="flex flex-col mt-5 md:mt-0 flex-1 w-full p-8">
                         <h3 class="text-xl ">Pizza Margherita</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
                         <h4>9,50€</h4>
@@ -158,10 +213,10 @@
                     </div>
                 </li>
 
-                <li class="flex flex-row-reverse">
+                <li class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:mt-0">
                     <div
                         class="bouton bg-[url('images/pizzaformage.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="10.90" name="Pizza 4 Fromages">+</button>
                     </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Pizza 4 fromages</h3>
@@ -170,10 +225,10 @@
                         <p class="text-xs italic">Mozzarella, gorgonzola, emmental, parmesan.</p>
                     </div>
                 </li>
-                <li class="flex flex-row-reverse">
+                <li class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:-mt-0">
                     <div
                         class="bouton bg-[url('images/pizzaveggie.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1"value="9.90" name="Pizza Veggie">+</button>
                     </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Pizza Veggie</h3>
@@ -182,15 +237,15 @@
                         <p class="text-xs italic">Base tomate, champignons, poivrons, olives, oignons, roquette.</p>
                     </div>
                 </li>
-                <li>
-                    <h2 class="text-2xl ml-5 mt-6 font-bold">Burger</h2>
+                <li class="w-full">
+                    <h2 class="text-2xl ml-5 mt-6 font-bold md:block">Burger</h2>
 
                 </li>
 
-                <li class="flex flex-row-reverse">
+                <li class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:-mt-0">
                     <div
                         class="bouton bg-[url('images/Burger.jpeg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="8.90" name="Cheeseburger">+</button>
                     </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Cheeseburger</h3>
@@ -200,10 +255,10 @@
                             sauce burger.</p>
                     </div>
                 </li>
-                <li class="flex flex-row-reverse">
+                <li class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:-mt-0">
                     <div
                         class="bouton bg-[url('images/baconburger.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="9.50" name="Bacon Burger">+</button>
                     </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Bacon Burger</h3>
@@ -212,10 +267,10 @@
                         <p class="text-xs italic">Steak haché, cheddar, bacon grillé, sauce barbecue.</p>
                     </div>
                 </li>
-                <li class="flex flex-row-reverse">
+                <li class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:-mt-0">
                     <div
                         class="bouton bg-[url('images/veganburger.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="9.90" name="Vegan Burger">+</button>
                     </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Vegan Burger</h3>
@@ -225,13 +280,13 @@
                             brioché.</p>
                     </div>
                 </li>
-                <li>
-                    <h2 class="text-2xl ml-5 mt-6 font-bold">Paninis</h2>
+                <li class="w-full">
+                    <h2 class="text-2xl ml-5 mt-6 font-bold md:block">Paninis</h2>
                 </li>
-                <li class="flex flex-row-reverse">
+                <li class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:-mt-0">
                     <div
                         class="bouton bg-[url('images/paninijf.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1"value="6.50" name="Panini Jambon-fromage">+</button>
                     </div>
                     <div class="flex flex-col w-full  flex-1 w-full p-8">
                         <h3 class="text-xl ">Panini Jambon-Fromage</h3>
@@ -240,10 +295,10 @@
                         <p class="text-xs italic">Pain chaud, jambon blanc, emmental fondu.</p>
                     </div>
                 </li>
-                <li class="flex flex-row-reverse">
+                <li class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:-mt-0">
                     <div
                         class="bouton bg-[url('images/paninipoulet.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="7.50" name="Panini Poulet Pesto">+</button>
                     </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Panini Poulet Pesto</h3>
@@ -252,10 +307,10 @@
                         <p class="text-xs italic">Poulet sauce pesto, mozzarella, tomates séchées.</p>
                     </div>
                 </li>
-                <li class="flex flex-row-reverse">
+                <li class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:-mt-0">
                     <div
                         class="bouton bg-[url('images/paninicm.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="7.90" name="Panini Chèvre-miel">+</button>
                     </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Panini Chèvre-Miel</h3>
@@ -264,10 +319,10 @@
                         <p class="text-xs italic">Chèvre frais, miel doux, noix concassées.</p>
                     </div>
                 </li>
-                <li class="flex flex-row-reverse">
+                <li class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:-mt-0">
                     <div
                         class="bouton bg-[url('images/paninipeperoni.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="7.50" name="Panini peperoni">+</button>
                     </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Panini Pepperoni</h3>
@@ -276,10 +331,10 @@
                         <p class="text-xs italic">Sauce tomate, mozzarella, pepperoni épicé.</p>
                     </div>
                 </li>
-                <li class="flex flex-row-reverse">
+                <li class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:-mt-0">
                     <div
                         class="bouton bg-[url('images/paninivegan.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="7" name="Salade César" value="7.90" name="Panini Vegan">+</button>
                     </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Panini Légumes Grillés (VEGAN)</h3>
@@ -288,11 +343,15 @@
                         <p class="text-xs italic">Aubergines, courgettes, poivrons, huile d'olive, basilic.</p>
                     </div>
                 </li>
-                <li id="dessert" class="flex flex-row-reverse">
+                <li class="w-full">
+                    <h2 class="text-2xl ml-5 mt-6 font-bold md:block">Desserts</h2>
+            </li> 
+                <li id="dessert" class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:-mt-0 md:block">
                     <div
-                        class="bouton bg-[url('images/tiramisu.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
-                    </div>
+                    class="bouton bg-[url('images/tiramisu.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
+                    <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="5.50" name="Tiramisu">+</button>
+                </div>
+                   
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Tiramisu Maison</h3>
                         <div class="bg-black w-32 h-0.5 self-start mt-2 mb-2"></div>
@@ -300,10 +359,10 @@
                         <p class="italic">Crème mascarpone légère, biscuits imbibés de café, cacao en poudre.</p>
                     </div>
                 </li>
-                <li class="flex flex-row-reverse">
+                <li class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:-mt-0">
                     <div
                         class="bouton bg-[url('images/compote.jpeg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="3.90" name="Compote de Pomme et Cannelle">+</button>
                     </div>
                     <div class="flex flex-col flex-1 w-full p-8">
                         <h3 class="text-xl ">Compote de Pommes & Cannelle</h3>
@@ -313,10 +372,10 @@
                         <p class="text-xs italic">Pommes cuites lentement, parfum de cannelle douce.</p>
                     </div>
                 </li>
-                <li class="flex flex-row-reverse">
+                <li class="flex flex-row-reverse md:flex md:flex-col md:justify-between md:w-[200px] md:-mt-0 md: ">
                     <div
                         class="bouton bg-[url('images/saladefruit.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="4.50" name="Salade de Fruits Frais">+</button>
                     </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Salade de Fruits Frais</h3>
@@ -325,10 +384,13 @@
                         <p class="italic">Mélange coloré de fruits de saison.</p>
                     </div>
                 </li>
-                <li id="boissons" class="flex flex-row-reverse">
+                <li class="w-full">
+                    <h2 id="boissons" class="text-2xl ml-5 mt-6 font-bold md:block">Boissons</h2>
+            </li> 
+                <li class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:-mt-0">
                     <div
                         class="bouton bg-[url('images/eau.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="1.50" name="Eau">+</button>
                     </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Eau minérale</h3>
@@ -336,10 +398,10 @@
                         <h4>1,50€</h4>
                     </div>
                 </li>
-                <li class="flex flex-row-reverse">
+                <li class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:-mt-0">
                     <div
                         class="bouton bg-[url('images/sodas.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="2.50" name="Soda">+</button>
                     </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-lg ">Soda (Coca-Cola, Fanta, Sprite)</h3>
@@ -347,10 +409,10 @@
                         <h4>2,50€</h4>
                     </div>
                 </li>
-                <li class="flex flex-row-reverse">
+                <li class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:-mt-0">
                     <div
                         class="bouton bg-[url('images/theglace.jpeg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="3.50" name="Thé Glacé maison">+</button>
                     </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Thé glacé maison</h3>
@@ -358,10 +420,10 @@
                         <h4>3,50€</h4>
                     </div>
                 </li>
-                <li class="flex flex-row-reverse">
+                <li class="flex flex-row-reverse md:flex md:flex-col md:items-center md:w-[200px] md:-mt-0">
                     <div
                         class="bouton bg-[url('images/smoothie.jpg')] bg-cover bg-center flex items-end justify-end w-35 h-35 mr-5 rounded-lg mt-12 mb-12">
-                        <button class="add bg-white rounded-full w-6 h-6 shadow-md font-bold m-1">+</button>
+                        <button class="add bg-white active:shadow-[-15px_15px_15px_15px_#e4e4e7_inset,1px_0px_1px_0px_#e4e4e7_inset,0px_0.125rem_1px_0px_#d4d4d8_inset] rounded-full w-6 h-6 shadow-md font-bold m-1 text-2xl flex justify-center items-center leading-none pb-1" value="4.00" name="Smoothie Mangue et Fruits Rouge">+</button>
                     </div>
                     <div class="flex flex-col  flex-1 w-full p-8">
                         <h3 class="text-xl ">Smoothie (Mangue & Fruits Rouges)</h3>
@@ -375,7 +437,7 @@
     <div class="bg-black w-1/2 h-0.5 mx-auto mb-6"></div>
 
     <footer>
-        <h2 class="text-[#ff04f4] flex justify-center font-bold text-2xl">Contact</h2>
+        <h2 class="text-[#d30fc3] flex justify-center font-bold text-2xl">Contact</h2>
         <form class=" w-full flex flex-col items-center" action="contact" method="post">
             <section class="w-[80%] p-2">
                 <input class="w-full p-4 rounded-2xl shadow-lg" type="text" placeholder="Nom">
@@ -393,7 +455,7 @@
                 <textarea class="w-full p-4 rounded-2xl shadow-lg" placeholder="Message"></textarea>
             </section>
             <section class="w-[80%] p-2 flex justify-end pb-8">
-                <button class="w-[50%] p-4 rounded-2xl shadow-lg bg-[#ff04f4] text-white text-bold"
+                <button class="w-[50%] p-4 rounded-2xl shadow-lg bg-[#d30fc3] text-white text-bold"
                     type="submit">Envoyer</button>
             </section>
             </for>
@@ -409,7 +471,7 @@
                 <a href="https://www.x.com/" target=”_blank”><img class="h-20 w-20" src="images/iconX.png"
                         alt="logox"></a>
             </section>
-            <section class="bg-[#ff04f4] w-full flex flex-col items-center align-center text-white">
+            <section class="bg-[#d30fc3] w-full flex flex-col items-center align-center text-white">
                 <a href="mentions-legales.html">
                     <p>Mentions légales</p>
                 </a>
