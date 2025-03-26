@@ -3,6 +3,20 @@
 	src: url("https://fonts.google.com/specimen/Montserrat?query=Montserrat");
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
+.toppage {
+	width: 35px;
+	color: #292929;
+	border-radius: 10px;
+	padding: 10px;
+	position: fixed;
+	top: 650px;
+	right: 10px;
+}
+
 body {
 	margin: 0;
 	background-color: #fafafa;
