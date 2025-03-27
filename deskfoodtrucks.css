@@ -5,43 +5,20 @@
         grid-template-columns: 1fr 1fr 1fr;
     
     }
-    .socialmedia {
+
+    .submit{
+      width: 75%;
       display: flex;
-      justify-content: center;
-      margin: 5% 35% 5% 35%;
-      text-align: center;
+      justify-content: end;
+  }
 
-    form {
-        margin: 5% 10% ;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-        }
-        .formulaire {width: 100%;}
-        .nom {
-            grid-column-start: 1;
-            grid-column-end: 2;
-          }
-         
-          .prenom {
-            grid-column-start: 2;
-            grid-column-end: 3;
-          }
-          .email {
-            grid-column-start: 1;
-            grid-column-end: 3;
-          }
-          .objet {
-            grid-column-start: 1;
-            grid-column-end: 3;
-          }
-          .message {
-            grid-column-start: 1;
-            grid-column-end: 3;
-          }
-          .submit {
-            grid-column-start: 2;
-            grid-column-end: 3;
-          }
+.formulaire {width: 50%;}
+#troisiemeTrait{
+  width: 50%;
+}
 
-}}
+footer h2{
+  margin-top: 0;
+
+}
+}
