@@ -22,7 +22,7 @@
     <header>
 		<section>
             <!-- Icône du Panier avec compteur -->
-            <div class="fixed right-5 top-3.5 z-[999999] flex items-center w-12 mr-8 mt-2 h-auto md:left-0 md:ml-20 md:top-4">
+            <div class="fixed left-17 top-4 z-[999999] flex items-center w-12 mr-8 mt-2 h-auto md:left-0 md:ml-20 md:top-4">
                 <img id="pictopanier" class="w-auto h-8 cursor-pointer" src="images/picto panier.svg" alt="panier">
                 <span id="count" class="indicateur cart-icon bg-[#d30fc3] mr-5 text-white text-xs font-bold w-5 h-5 flex items-center justify-center 
                              rounded-full absolute top-0 right-0 translate-x-1/2 -translate-y-1/2" value="0">
@@ -223,6 +223,31 @@
       <section class="copyright">
         <p>&copy Les Geeks - 2025</p>
       </section>
+       <!-- CODE POUR LE FORMULAIRE DE CONTACT -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        ( function ()
+        {
+            emailjs.init( "OE9-cl3x3ZPw4LHSZ" );
+        } )();
+
+        const form = document.getElementById( "formemail" );
+
+        form.addEventListener( "submit", function ( e )
+        {
+            e.preventDefault();
+
+            emailjs.sendForm( "service_f6pnqxa", "wildeats", this )
+                .then( () =>
+                {
+                    alert( "Message envoyé !" );
+                }, ( error ) =>
+                {
+                    console.error( "Erreur EmailJS :", error );
+                    alert( "Erreur à l’envoi : " + JSON.stringify( error ) );
+                } );
+        } );
+    </script>
     </footer>
   </body>
 </html>
