@@ -1,355 +1,322 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 
 :root {
-	--pink: #d30fc3;
-	--box-shadow: 3px 3px 10px #000000d5;
-	--box-shadow-avis: 3px 3px 9px #0000003b;
+  --pink: #d30fc3;
+  --box-shadow: 3px 3px 10px #000000d5;
+  --box-shadow-avis: 3px 3px 9px #0000003b;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	box-sizing: border-box;
+body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
 }
 html {
-	background-color: #fafafa;
+  background-color: #fafafa;
+  scroll-behavior: smooth;
 }
 
-header {
-	background-image: url(./images/background\ mobile.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 256px;
+.toppage {
+  width: 40px;
+  color: #292929;
+  border-radius: 10px;
+  padding: 10px;
+  position: sticky;
+  top: 650px;
+  float: right;
 }
-nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-nav img {
-	margin: 1em;
-	width: 7em;
-}
-nav ul {
-	display: flex;
-	justify-content: center;
-}
-nav ul li {
-	width: 4em;
-}
-nav ul li img {
-	height: 1.5em;
-	width: 1.5em;
-}
+
 header h1 {
-	color: white;
-	font-family: "Montserrat";
-	font-style: italic;
-	font-size: medium;
-	font-weight: 500;
-	line-height: 1.5em;
-	text-align: center;
-	margin: 8em auto 0 auto;
-	width: 350px;
+  color: white;
+  font-family: "Montserrat";
+  font-style: italic;
+  font-size: medium;
+  font-weight: 500;
+  line-height: 1.5em;
+  text-align: center;
+  margin: 9em auto 0 auto;
+  width: 350px;
 }
 
 main .logoWild {
-	display: flex;
-	margin: 0 auto;
-	width: 18em;
+  display: flex;
+  margin: 0 auto;
+  width: 18em;
 }
 main h2 {
-	color: var(--pink);
-	text-align: center;
+  color: var(--pink);
+  text-align: center;
 
-	font-family: "Montserrat";
-	font-size: 1.5rem;
-	font-weight: 700;
+  font-family: "Montserrat";
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 #premierTrait {
-	height: 2px;
-	width: 15em;
-	margin: 1em auto;
-	background-color: #4b4b4b;
+  height: 2px;
+  width: 15em;
+  margin: 1em auto;
+  background-color: #4b4b4b;
 }
 
 .group-imgs {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .sur-place {
-	margin: .8em 0;
-	width: 19em;
-	height: 13em;
-	background-image: url(./images/La\ cafeteria\ filter.jpg);
-	background-size: cover;
-	cursor: pointer;
-	border-radius: .5em;
-	box-shadow: var(--box-shadow);
-	transition: .4s ease-in-out;
+  margin: 0.8em 0;
+  width: 19em;
+  height: 13em;
+  background-image: url(./images/La\ cafeteria\ filter.jpg);
+  background-size: cover;
+  cursor: pointer;
+  border-radius: 0.5em;
+  box-shadow: var(--box-shadow);
+  transition: 0.4s ease-in-out;
 }
 .exterieur {
-	margin: .8em 0;
-	width: 19em;
-	height: 13em;
-	background-image: url(./images/exterieur\ filter.jpg);
-	background-size: cover;
-	cursor: pointer;
-	border-radius: .5em;
-	box-shadow: var(--box-shadow);
-	transition: .4s ease-in-out;
+  margin: 0.8em 0;
+  width: 19em;
+  height: 13em;
+  background-image: url(./images/exterieur\ filter.jpg);
+  background-size: cover;
+  cursor: pointer;
+  border-radius: 0.5em;
+  box-shadow: var(--box-shadow);
+  transition: 0.4s ease-in-out;
 }
 .foodtruck {
-	margin: .8em 0;
-	width: 19em;
-	height: 13em;
-	background-image: url(./images/Nos\ foodtruck\ filter.jpg);
-	background-size: cover;
-	cursor: pointer;
-	border-radius: .5em;
-	box-shadow: var(--box-shadow);
-	transition: .4s ease-in-out;
+  margin: 0.8em 0;
+  width: 19em;
+  height: 13em;
+  background-image: url(./images/Nos\ foodtruck\ filter.jpg);
+  background-size: cover;
+  cursor: pointer;
+  border-radius: 0.5em;
+  box-shadow: var(--box-shadow);
+  transition: 0.4s ease-in-out;
 }
 .foodtruck:hover {
-	transform: scale(1.07);
+  transform: scale(1.07);
 }
 .exterieur:hover {
-	transform: scale(1.07);
+  transform: scale(1.07);
 }
 .sur-place:hover {
-	transform: scale(1.07);
+  transform: scale(1.07);
 }
 article h3 {
-	text-align: center;
-	font-family: "Montserrat";
-	font-weight: 500;
-	letter-spacing: .2rem;
-	font-size: 1rem;
-	margin-top: 1.7em;
-	color: white;
-	padding-top: 1.5em;
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+  margin-top: 1.7em;
+  color: white;
+  padding-top: 1.5em;
 }
 
 #deuxiemeTrait {
-	height: 2px;
-	width: 15em;
-	margin: 2em auto;
-	background-color: #4b4b4b;
+  height: 2px;
+  width: 15em;
+  margin: 2em auto;
+  background-color: #4b4b4b;
 }
 
 .title-avis {
-	margin: 0 0 1em 0;
+  margin: 0 0 1em 0;
 }
 
 .avis img {
-	height: 75px;
-	border-radius: 50%;
-	margin-left: 2em;
+  height: 75px;
+  border-radius: 50%;
+  margin-left: 2em;
 }
 .texte {
-	box-shadow: var(--box-shadow-avis);
-	margin-left: 5em;
-	width: 15em;
-	padding: 30px 25px;
-	border-radius: 7px;
-	margin-top: -2.5em;
+  box-shadow: var(--box-shadow-avis);
+  margin-left: 5em;
+  width: 15em;
+  padding: 30px 25px;
+  border-radius: 7px;
+  margin-top: -2.5em;
 }
 .texte p {
-	font-family: "Montserrat";
-	font-size: .5rem;
-	font-weight: 400;
-	background-color: white;
+  font-family: "Montserrat";
+  font-size: 0.5rem;
+  font-weight: 400;
+  background-color: white;
 }
 .texte .nom {
-	font-family: "Montserrat";
-	font-size: .6rem;
-	font-weight: 700;
-	text-align: end;
-	width: 100px;
-	margin-left: 105px;
-	margin-bottom: -10px;
+  font-family: "Montserrat";
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-align: end;
+  width: 100px;
+  margin-left: 105px;
+  margin-bottom: -10px;
 }
 
 .content {
-	margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 #troisiemeTrait {
-	height: 2px;
-	width: 15em;
-	margin: 3em auto 0 auto;
-	background-color: #4b4b4b;
+  height: 2px;
+  width: 15em;
+  margin: 3em auto 0 auto;
+  background-color: #4b4b4b;
 }
 
 footer {
-	background-color: var(--tertiary);
+  background-color: var(--tertiary);
 
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .socialmedia {
-	display: flex;
-	justify-content: space-evenly;
-	margin: 20px auto;
-	width: 20em;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px auto;
+  width: 20em;
 }
 
 .blacklogo {
-	max-width: 50%;
-	margin: 0 auto;
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 .imgsocial {
-	height: 30px;
+  height: 30px;
 }
 
 footer p {
-	display: flex;
-	justify-content: center;
-	padding: 2px;
+  display: flex;
+  justify-content: center;
+  padding: 2px;
 }
 footer h2 {
-	color: var(--pink);
-	text-align: center;
-	margin-top: 1em;
-	font-family: "Montserrat";
-	font-size: 1.5rem;
-	font-weight: 700;
+  color: var(--pink);
+  text-align: center;
+  margin-top: 1em;
+  font-family: "Montserrat";
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 form {
-	margin: 20px;
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	padding: 0 0 30px 0;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 0 30px 0;
 }
 footer section {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .formulaire {
-	width: 80%;
-	border-radius: 10px;
-	box-shadow: var(--box-shadow-avis);
-	border-color: #ffffff;
-	padding: 10px;
-	border-bottom-width: 1px;
-	border-top-width: 1px;
-	border-left-width: 1px;
-	border-right-width: 1px;
-	margin: .5em 0;
-	font-family: "Montserrat";
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-avis);
+  border-color: #ffffff;
+  padding: 10px;
+  border-bottom-width: 1px;
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  margin: 0.5em 0;
+  font-family: "Montserrat";
 }
 
 .button {
-	border-radius: 10px;
-	padding: 10px 20px;
-	font-weight: bold;
-	background-color: var(--pink);
-	color: white;
-	transition: .3s ease-in-out;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: var(--pink);
+  color: white;
+  transition: 0.3s ease-in-out;
 }
 .submit {
-	width: 90%;
-	display: flex;
-	justify-content: end;
+  width: 90%;
+  display: flex;
+  justify-content: end;
 }
 
 button:hover {
-	transform: scale(1.07);
+  transform: scale(1.07);
 }
 
 button:active {
-	background-color: #f7146b;
-	border-color: rgba(0, 0, 0, 0.15);
-	box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-	color: white;
-	transform: translateY(0);
+  background-color: #f7146b;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: white;
+  transform: translateY(0);
 }
 
 .copyright {
-	background-color: var(--pink);
-	color: white;
-	padding: 10px 0 10px 0;
+  background-color: var(--pink);
+  color: white;
+  padding: 10px 0 10px 0;
 }
 
 footer a {
-	text-decoration: none;
-	color: black;
+  text-decoration: none;
+  color: black;
 }
 
 @media screen and (min-width: 768px) {
-	header {
-		background-image: url(./images/background\ ipad.jpg);
-		background-size: cover;
-		height: 395px;
-	}
-	nav img {
-		margin: 1em;
-		width: 10em;
-	}
-	header h1 {
-		font-size: 1.1em;
-		width: 90%;
-		margin-top: 15em;
-	}
-	main .logoWild {
-		width: 25em;
-	}
-	.group-imgs article {
-		margin: 0 1em;
-	}
-	#deuxiemeTrait {
-		margin-top: 3em;
-	}
-	.avis {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-	}
-	#troisiemeTrait {
-		margin-top: 1em;
-	}
-	.formulaire {
-		width: 65%;
-	}
-	.submit {
-		width: 83%;
-		display: flex;
-		justify-content: end;
-	}
+  header h1 {
+    font-size: 1.1em;
+    width: 90%;
+    margin-top: 15em;
+  }
+  main .logoWild {
+    width: 25em;
+  }
+  .group-imgs article {
+    margin: 0 1em;
+  }
+  #deuxiemeTrait {
+    margin-top: 3em;
+  }
+  .avis {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #troisiemeTrait {
+    margin-top: 1em;
+  }
+  .formulaire {
+    width: 65%;
+  }
+  .submit {
+    width: 83%;
+    display: flex;
+    justify-content: end;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-	header {
-		background-image: url(./images/background\ web.jpg);
-		background-size: cover;
-		height: 44em;
-	}
-	nav img {
-		margin: 1em;
-		width: 15em;
-	}
-	header h1 {
-		font-size: 2em;
-		width: 90%;
-		margin-top: 16em;
-	}
-	main .logoWild {
-		width: 25em;
-	}
-	.formulaire {
-		width: 50%;
-	}
-	.submit {
-		width: 75%;
-		display: flex;
-		justify-content: end;
-	}
+  main .logoWild {
+    width: 25em;
+  }
+  .formulaire {
+    width: 50%;
+  }
+  .submit {
+    width: 75%;
+    display: flex;
+    justify-content: end;
+  }
+  header h1 {
+    font-size: 1.7em;
+    width: 90%;
+    margin-top: 15em;
+  }
 }

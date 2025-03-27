@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,36 +13,105 @@
     />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	<script src="script.js" defer></script>
+    <script src="panier1.js" defer></script>
 
     <title>Document</title>
   </head>
   <body>
     <header>
-      <nav>
-        <img id="Wild-eats" src="./images/LOGO_-_WILD_EATS.png"" alt="logo Wild
-        eats" />
-        <ul>
-          <li>
-            <a href="#login"
-              ><img src="./images/picto login.svg" alt="login"
-            /></a>
-          </li>
-          <li>
-            <a href="#panier"
-              ><img src="./images/picto panier.svg" alt="panier"
-            /></a>
-          </li>
-          <li>
-            <a href="#menu-burger">
-              <img src="./images/picto menu burger.svg" alt="menu burger"
-            /></a>
-          </li>
-        </ul>
-      </nav>
-
-      <h1>
-        Les meilleures adresses pour satisfaire vos envies culinaires du campus.
-      </h1>
+		<section>
+            <!-- Icône du Panier avec compteur -->
+            <div class="fixed right-5 top-3.5 z-[999999] flex items-center w-12 mr-8 mt-2 h-auto md:left-0 md:ml-20 md:top-4">
+                <img id="pictopanier" class="w-auto h-8 cursor-pointer" src="images/picto panier.svg" alt="panier">
+                <span id="count" class="indicateur cart-icon bg-[#d30fc3] mr-5 text-white text-xs font-bold w-5 h-5 flex items-center justify-center 
+                             rounded-full absolute top-0 right-0 translate-x-1/2 -translate-y-1/2" value="0">
+                    0
+                </span>
+            </div>
+        
+            <!-- Sidebar -->
+            <section id="panier" 
+                class="sideBar w-[250px] h-full fixed top-0 right-0 bg-white/90 
+                       transform translate-x-full transition-transform duration-300 ease-in-out z-[999999] p-[20px] flex flex-col">
+                
+                <div class="sidebar-close flex justify-end cursor-pointer">
+                    <button id="closebtn" class="ml-auto text-2xl text">X</button>
+                </div>
+        
+                <!-- Menu du Panier -->
+                <div class="menuPanier flex flex-col gap-2 mt-2 font-bold">
+                    <h2 class="text-2xl">Mon Panier</h2>
+                </div>
+    
+                <div class="itemPanier flex justify-between p-3"></div>
+        
+                <div class="sideBarfooter mt-auto">
+                    <div class="total flex items-center justify-between pb-3">
+                        <h4 class="font-bold">Total :</h4>
+                        <div class="Montant">0,00€</div>
+                    </div>
+                    <button class="boutoncommander w-full mt-2 border-2 rounded-lg bg-[#d30fc3] 
+                    text-white text-xl font-bold h-12 inline-flex items-center justify-center rounded-md px-6 font-medium text-neutral-50 relative group transition active:scale-110">
+    Commander
+    <div class="absolute bg-white w-0 h-[2px] transition-all duration-300 group-hover:w-[54%] bottom-2 left-12"></div>
+</button>
+                </div>
+            </section>
+        </section>        
+        <!--Burger Icone-->
+            <nav class="fixed w-full flex justify-between md:flex-row-reverse bg-black">
+                <img class="z-1 h-8 m-5" src="images/logo wildeatq.png">
+                <div id="burgerBtn" class="z-999999 flex flex-col right-5 py-5 hover:cursor-pointer md: p-5 mt-2 ">
+                    <div id="barre1" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                    <div id="barre2" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                    <div id="barre3" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <!--Menu ouvrant-->
+        <section id="openMenu"
+            class="flex flex-col justify-center items-center content-[50%] gap-[80px] bg-[#e9e9e9]/90 fixed right-0 h-full w-[45%] z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div>
+                <div id="burgerBtn1" class="absolute top-0 flex flex-col right-0 py-5 hover:cursor-pointer md: p-5 ">
+                    <div id="barre1" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                    <div id="barre2" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                    <div id="barre3" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                </div>
+                <a href="cafeteria.html" class="group relative block">
+                    <h2 class="group relative hover:text-[#d30fc3]">La cafétéria</h2>
+                    <div class="bg-[#d30fc3] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="exterieur.html" class="group relative block">
+                    <h2 class="hover:text-[#d30fc3]">À l'extérieur</h2>
+                    <div class="bg-[#d30fc3] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="foodtrucks.html" class="group relative block">
+                    <h2 class="hover:text-[#d30fc3]">Nos Foodtrucks</h2>
+                    <div class="bg-[#d30fc3] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
+                    </div>
+                </a>
+            </div>
+        </section>
+        </nav>
+<!-- H1 -->
+        <div class="bg-[url('images/backgroundmobile.jpg')] flex justify-center items-center text-center bg-contain bg-no-repeat bg-center bg h-74 w-screen md:h-125 md:bg-[url('images/backgroundipad.jpg')] md:bg-contain md:bg-center md:bg-no-repeat xl:bg-[url('images/backgroundweb.jpg')] xl:w-full xl:bg-cover">
+			<h1>
+			  Les meilleures adresses pour satisfaire vos envies culinaires du campus.
+			</h1>
+        </div>
     </header>
 
     <main>
