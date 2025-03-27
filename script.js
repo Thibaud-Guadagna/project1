@@ -21,6 +21,7 @@ button.addEventListener('click', () => {
   bar3.classList.toggle('-translate-y-2.5')
 })
 button1.addEventListener('click', () => {
+  button1.classList.add('hidden')
   button.classList.add('z-999999')
   menu.classList.toggle('translate-x-full')
   console.log('click')

@@ -4,43 +4,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Alexandra PASTOR">
+    <meta name="author" content="Les Geeks">
     <meta name="description" content="Retrouvez toutes les bonnes adresses pour manger à l'extérieur du campus">
     <title>WILDEATS | A L'EXTERIEUR</title>
     <link rel="shortcut icon" href="/images/flavicon_wild_eats.ico" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="styleexterieur.css">
+    <link rel="stylesheet" href="deskexterieur.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="scriptexterieur.js"></script>
 </head>
 
 <body>
     <header>
         <section>
-            <nav>
-                <img class="absolute z-1 h-8 m-5 " src="images/LOGO_-_WILD_EATS.webp">
-                <div id="burgerBtn" class=" absolute z-2 flex flex-col right-5 py-5 h-20 hover:cursor-pointer ">
-                    <div class="bg-[#ff04f4] w-10 h-1 mb-4 flex justify-end"></div>
-                    <div class="bg-[#ff04f4] w-10 h-1 mb-4 flex justify-end"></div>
-                    <div class="bg-[#ff04f4] w-10 h-1 flex justify-end "></div>
+            <!-- Icône du Panier avec compteur -->
+            <div class="fixed right-5 top-3.5 z-[999999] flex items-center w-12 mr-8 mt-2 h-auto md:left-0 md:ml-20 md:top-4">
+                <img id="pictopanier" class="w-auto h-8 cursor-pointer" src="images/picto panier.svg" alt="panier">
+                <span id="count" class="indicateur cart-icon bg-[#d30fc3] mr-5 text-white text-xs font-bold w-5 h-5 flex items-center justify-center 
+                             rounded-full absolute top-0 right-0 translate-x-1/2 -translate-y-1/2" value="0">
+                    0
+                </span>
+            </div>
+        
+            <!-- Sidebar -->
+            <section id="panier" 
+                class="sideBar w-[250px] h-full fixed top-0 right-0 bg-white/90 
+                       transform translate-x-full transition-transform duration-300 ease-in-out z-[999999] p-[20px] flex flex-col">
+                
+                <div class="sidebar-close flex justify-end cursor-pointer">
+                    <button id="closebtn" class="ml-auto text-2xl text">X</button>
                 </div>
-        </section>
-        <section id="openMenu">
-            <div class="absolute">La cafétéria</div>
-            <div class="absolute">À l'extérieur</div>
-            <div class="absolute">Nos Foodtrucks</div>
+        
+                <!-- Menu du Panier -->
+                <div class="menuPanier flex flex-col gap-2 mt-2 font-bold">
+                    <h2 class="text-2xl">Mon Panier</h2>
+                </div>
+    
+                <div class="itemPanier flex justify-between p-3"></div>
+        
+                <div class="sideBarfooter mt-auto">
+                    <div class="total flex items-center justify-between pb-3">
+                        <h4 class="font-bold">Total :</h4>
+                        <div class="Montant">0,00€</div>
+                    </div>
+                    <button class="boutoncommander w-full mt-2 border-2 rounded-lg bg-[#d30fc3] 
+                    text-white text-xl font-bold h-12 inline-flex items-center justify-center rounded-md px-6 font-medium text-neutral-50 relative group transition active:scale-110">
+    Commander
+    <div class="absolute bg-white w-0 h-[2px] transition-all duration-300 group-hover:w-[54%] bottom-2 left-12"></div>
+</button>
+                </div>
+            </section>
+        </section>        
+        <!--Burger Icone-->
+            <nav class="fixed w-full flex justify-between md:flex-row-reverse bg-black z-50">
+                <a href="Home.html"><img class="z-1 h-8 m-5" src="images/logo wildeatq.png"></a>
+                <div id="burgerBtn" class="z-999999 flex flex-col right-5 py-5 hover:cursor-pointer md: p-5 mt-2 ">
+                    <div id="barre1" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                    <div id="barre2" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                    <div id="barre3" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                </div>
             </nav>
-
-            <div class="flex flex-col justify-center items-center">
-                <img class="relative" src=" images/La cafeteria.jpg" alt="la cafeteria">
-                <h1 class="absolute bg-white/85 w-full flex justify-center items-center font-montserrat font-bold">
-                    A L'EXTERIEUR
-                </h1>
+        </section>
+        <!--Menu ouvrant-->
+        <section id="openMenu"
+            class="flex flex-col justify-center items-center content-[50%] gap-[80px] bg-[#e9e9e9]/90 fixed right-0 h-full w-[45%] z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div>
+                <div id="burgerBtn1" class="absolute top-0 flex flex-col right-0 py-5 hover:cursor-pointer md: p-5 ">
+                    <div id="barre1" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                    <div id="barre2" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                    <div id="barre3" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
+                    </div>
+                </div>
+                <a href="cafeteria.html" class="group relative block">
+                    <h2 class="group relative hover:text-[#d30fc3]">La cafétéria</h2>
+                    <div class="bg-[#d30fc3] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="exterieur.html" class="group relative block">
+                    <h2 class="hover:text-[#d30fc3]">À l'extérieur</h2>
+                    <div class="bg-[#d30fc3] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="foodtrucks.html" class="group relative block">
+                    <h2 class="hover:text-[#d30fc3]">Nos Foodtrucks</h2>
+                    <div class="bg-[#d30fc3] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
+                    </div>
+                </a>
             </div>
         </section>
+        </nav>
+
+<!-- H1 -->
+        <div class="bg-[url('images/paul-rysz-bLF3vK_X2Vc-unsplash.jpg')] flex justify-center items-center text-center bg-cover bg-contain bg-center bg-no-repeat h-74 w-screen md:h-125 md:bg-cover md:bg-center md:bg-no-repeat">
+            <h1 class="bg-white/85 w-full mt-18 font-montserrat font-bold text-lg tracking-[0.15rem] md:text-2xl">
+             A  L'EXTERIEUR
+            </h1> 
+        </div>
     </header>
+    
 
     <main>
-        <section>
+        <a href="#" class="btn btn-primary"><button class="toppage"><img src="images/Arrow.png" alt="arrowtop"></button></a>
+            <div class="sticky top-19 z-30 bg-[#fafafa] md:p-5">
             <ul class="filtres">
                 <li><button id="all">Tout voir</button></li>
                 <li><button id="asiatique">Asiatique</button></li>
@@ -48,8 +122,8 @@
                 <li><button id="italien">Italien</button></li>
                 <li><button id="mexicain">Mexicain</button></li>
             </ul>
-        </section>
-        <section class="adress">
+                    </div>
+                                 <section class="adress z-20">
             <aside class="burger">
                 <h2>Mc Donald's</h2>
                 <div class="image">
@@ -87,40 +161,87 @@
                 </div>
             </aside>
         </section>
+        <div id="separation"></div>
     </main>
 
-    <footer>
-        <h2>Contact</h2>
-        <form action="contact" method="post">
-            <input class="formulaire" type="text" placeholder="Nom">
-            <input class="formulaire" type="text" placeholder="Prénom">
-            <input class="formulaire" type="email" placeholder="Email">
-            <input class="formulaire" type="objet" placeholder="Objet">
-            <textarea class="formulaire" placeholder="Message"></textarea>
-            <button class="button" type="submit">Envoyer</button>
+      <!-- FOOTER -->
+
+      <footer>
+        <h2 class="titre2">Contact</h2>
+        <form id="formemail">
+            <section class="nom">
+            <input class="formulaire" type="text" name="name" id="nom" placeholder="Nom" required></section>
+            <section class="prenom">
+            <input class="formulaire" type="text" name="prenom" id="prenom" placeholder="Prénom" required></section>
+            <section class="email">
+            <input class="formulaire" type="email" name="email" id="email" placeholder="Email" required></section>
+            <section class="email">
+            <input class="formulaire" type="text" name="objet" id="objet" placeholder="Objet" required></section>
+            <section class="message">
+                
+            <textarea class="formulaire" name="message" id="message" placeholder="Votre message" required></textarea></section>
+            <section class="submit">
+            <button class="button" type="submit" id="buttonemail">Envoyer</button></section>
         </form>
 
-        <img class="blacklogo" src="images/LOGO_NOIR_-_WILD_EATS.png" alt="logowild">
-        <section class="socialmedia">
-            <a href="https://www.facebook.com/" target=”_blank”><img class="imgsocial" src="images/iconfacebook.png"
-                    alt="logofacebook"></a>
-            <a href="https://www.instagram.com/" target=”_blank”><img class="imgsocial" src="images/iconinstagram.png"
-                    alt="logoinstagram"></a>
-            <a href="https://www.x.com/" target=”_blank”><img class="imgsocial" src="images/iconX.png" alt="logox"></a>
-        </section>
-
-
-        </a><br>
-        <section class="copyright">
-            <a href="mentions-legales.html">
-                <p>Mentions légales</p>
-            </a>
-            <a href="cgv.html">
-                <p>CGV</p>
-                <p>&copy Les Geeks - 2025</p>
-        </section>
+      <img
+        class="blacklogo"
+        src="images/LOGO_NOIR_-_WILD_EATS.png"
+        alt="logowild"
+      />
+      <section class="socialmedia">
+        <a href="https://www.facebook.com/" target="”_blank”"
+          ><img
+            class="imgsocial"
+            src="images/iconfacebook.png"
+            alt="logofacebook"
+        /></a>
+        <a href="https://www.instagram.com/" target="”_blank”"
+          ><img
+            class="imgsocial"
+            src="images/iconinstagram.png"
+            alt="logoinstagram"
+        /></a>
+        <a href="https://www.x.com/" target="”_blank”"
+          ><img class="imgsocial" src="images/iconX.png" alt="logox"
+        /></a>
+      </section>
+      <section class="copyright">
+      <a href="mentions-legales.html">
+        <p>Mentions légales</p>
+      </a>
+      <a href="cgv.html"> <p>CGV</p> </a><br />
+      
+        <p>&copy Les Geeks - 2025</p>
+      </section>
     </footer>
+    
+    <!-- CODE POUR LE FORMULAIRE DE CONTACT -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        ( function ()
+        {
+            emailjs.init( "OE9-cl3x3ZPw4LHSZ" ); // Remplace si besoin par ta Public Key exacte
+        } )();
 
+        const form = document.getElementById( "formemail" );
+
+        form.addEventListener( "submit", function ( e )
+        {
+            e.preventDefault();
+
+            emailjs.sendForm( "service_f6pnqxa", "wildeats", this )
+                .then( () =>
+                {
+                    alert( "Message envoyé !" );
+                }, ( error ) =>
+                {
+                    console.error( "Erreur EmailJS :", error );
+                    alert( "Erreur à l’envoi : " + JSON.stringify( error ) );
+                } );
+        } );
+    </script>
+<!-- FIN DU FOOTER ET DU CODE POUR LE FORMULAIRE DE CONTACT -->
 </body>
 
 </html>

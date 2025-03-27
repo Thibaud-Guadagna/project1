@@ -80,6 +80,20 @@ h4 {
 	background-color: #4b4b4b;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+  .toppage{
+width: 40px;
+ color: #292929;
+ border-radius: 10px;
+ padding: 10px;
+ position: sticky;
+ top : 650px;
+ float : right
+
+  }
+
 /* FOOTER */
 footer {
 	display: flex;
