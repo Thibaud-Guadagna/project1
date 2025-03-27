@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,7 @@
     <header>
         <section>
             <!-- Icône du Panier avec compteur -->
-            <div class="fixed right-5 top-3.5 z-[999999] flex items-center w-12 mr-8 mt-2 h-auto md:left-0 md:ml-20 md:top-4">
+            <div class="fixed left-17 top-4 z-[999999] flex items-center w-12 mr-8 mt-2 h-auto md:left-0 md:ml-20 md:top-4">
                 <img id="pictopanier" class="w-auto h-8 cursor-pointer" src="images/picto panier.svg" alt="panier">
                 <span id="count" class="indicateur cart-icon bg-[#d30fc3] mr-5 text-white text-xs font-bold w-5 h-5 flex items-center justify-center 
                              rounded-full absolute top-0 right-0 translate-x-1/2 -translate-y-1/2" value="0">
@@ -33,14 +33,14 @@
             <!-- Sidebar -->
             <section id="panier" 
                 class="sideBar w-[250px] h-full fixed top-0 right-0 bg-white/90 
-                       transform translate-x-full transition-transform duration-300 ease-in-out z-[999999] p-[20px] flex flex-col">
+                       transform translate-x-full transition-transform duration-300 ease-in-out z-[999999] p-[20px] flex flex-col md:w-[40%]">
                 
                 <div class="sidebar-close flex justify-end cursor-pointer">
                     <button id="closebtn" class="ml-auto text-2xl text">X</button>
                 </div>
         
                 <!-- Menu du Panier -->
-                <div class="menuPanier flex flex-col gap-2 mt-2 font-bold">
+                <div class="menuPanier flex flex-col gap-2 mt-2 font-bold ">
                     <h2 class="text-2xl">Mon Panier</h2>
                 </div>
     
@@ -60,8 +60,8 @@
             </section>
         </section>        
         <!--Burger Icone-->
-            <nav class="fixed w-full flex justify-between md:flex-row-reverse bg-black">
-                <img class="z-1 h-8 m-5" src="images/logo wildeatq.png">
+            <nav class="fixed w-full flex flex-row-reverse justify-between md:flex-row-reverse bg-black">
+                <a href="Home.html"><img class="z-1 h-8 m-5" src="images/logo wildeatq.png"></a>
                 <div id="burgerBtn" class="z-999999 flex flex-col right-5 py-5 hover:cursor-pointer md: p-5 mt-2 ">
                     <div id="barre1" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
                     </div>
@@ -74,9 +74,9 @@
         </section>
         <!--Menu ouvrant-->
         <section id="openMenu"
-            class="flex flex-col justify-center items-center content-[50%] gap-[80px] bg-[#e9e9e9]/90 fixed right-0 h-full w-[45%] z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+            class="flex flex-col justify-center items-center content-[50%] gap-[80px] bg-[#e9e9e9]/90 fixed right-0 h-full w-[45%] z-50 transform translate-x-full transition-transform duration-300 ease-in-out font-bold">
             <div>
-                <div id="burgerBtn1" class="absolute top-0 flex flex-col right-0 py-5 hover:cursor-pointer md: p-5 ">
+                <div id="burgerBtn1" class="hidden absolute top-0 flex flex-col right-0 py-5 hover:cursor-pointer md: p-5 ">
                     <div id="barre1" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
                     </div>
                     <div id="barre2" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
@@ -84,22 +84,22 @@
                     <div id="barre3" class="bg-white w-7 h-0.5 mb-2 flex justify-end transition-transform duration-300 z-999999">
                     </div>
                 </div>
-                <a href="cafeteria.html" class="group relative block">
-                    <h2 class="group relative hover:text-[#d30fc3]">La cafétéria</h2>
+                <a href="cafeteria.html" class="group relative block ">
+                    <h2 class="group relative hover:text-[#d30fc3]">LA CAFÉTÉRIA</h2>
                     <div class="bg-[#d30fc3] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
                     </div>
                 </a>
             </div>
             <div>
                 <a href="exterieur.html" class="group relative block">
-                    <h2 class="hover:text-[#d30fc3]">À l'extérieur</h2>
+                    <h2 class="hover:text-[#d30fc3]">À L'EXTÉRIEUR</h2>
                     <div class="bg-[#d30fc3] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
                     </div>
                 </a>
             </div>
             <div>
                 <a href="foodtrucks.html" class="group relative block">
-                    <h2 class="hover:text-[#d30fc3]">Nos Foodtrucks</h2>
+                    <h2 class="hover:text-[#d30fc3]">NOS FOODTRUCKS</h2>
                     <div class="bg-[#d30fc3] w-0 h-[2px] transition-all duration-300 group-hover:w-full">
                     </div>
                 </a>
@@ -114,6 +114,7 @@
             </h1> 
         </div>
     </header>
+    <main><a href="#" class="w-[40px] color-[#292929] rounded-full p-[10px] fixed top-[90%] right-[10px]"><button class="toppage"><img src="images/Arrow.png" alt="arrowtop"></button></a>
         <section class="sticky top-19 bg-[#fafafa] md:mt-10 md:bg-auto md:bg-top md:h-0">
             <nav class="p-4">
                 <div>
@@ -435,6 +436,7 @@
         </div>
     </section>
     <div class="bg-black w-1/2 h-0.5 mx-auto mb-6"></div>
+    </main>
 
     <footer>
         <h2 class="text-[#d30fc3] flex justify-center font-bold text-2xl">Contact</h2>
