@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     function updateCart() {
-        cartList.innerHTML = "<h3>Mon Panier<h3>"; // J'utilise innerHTML pour éviter que les éléments s'ajoutent en boucle 
+        cartList.innerHTML = '<h2 class="text-2xl">Mon Panier<h2>'; // J'utilise innerHTML pour éviter que les éléments s'ajoutent en boucle 
         let total = 0;
         
         // Cart est le tableau vide que j'ai créé avant et je fais une boucle dedans qui parcourt les plats (que j'ai ajoutés) avec Index
