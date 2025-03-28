@@ -306,7 +306,7 @@ footer a {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   main .logoWild {
     width: 25em;
   }
